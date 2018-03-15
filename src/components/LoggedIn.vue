@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ siteTitle }}</h1>
 
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
   name: "LoggedIn",
   data() {
     return {
-      msg: "Her er vi innlogga"
+      siteTitle: "Her er vi innlogga"
     };
   }
 };

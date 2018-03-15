@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ siteTitle }}</h1>
+    <h2>{{ lead }}</h2>
     <el-breadcrumb separator="/">
       <el-breadcrumb-item :to="{ path: '/' }">Hjem</el-breadcrumb-item>
       <el-breadcrumb-item>Først er du her</el-breadcrumb-item>
@@ -45,9 +46,28 @@
       that the users are used to;
     </div>
     <div>
-      Consistent within interface: all elements should be
-      consistent, such as: design style, icons and texts,
-      position of elements, etc.
+      <el-row :gutter="40">
+      <el-col :xs="24" :sm="6" :md="4" :lg="3" :xl="1">
+        <div class="grid-content ">
+        Hallo
+        </div>
+      </el-col>
+      <el-col :xs="24" :sm="6" :md="8" :lg="9" :xl="11">
+        <div class="grid-content">
+        Hallo
+        </div>
+      </el-col>
+      <el-col :xs="24" :sm="6" :md="8" :lg="9" :xl="11">
+        <div class="grid-content">
+        Hallo
+        </div>
+      </el-col>
+      <el-col :xs="24" :sm="6" :md="4" :lg="3" :xl="1">
+        <div class="grid-content">
+        Hallo
+        </div>
+      </el-col>
+    </el-row>
     </div>
   </el-collapse-item>
 
@@ -106,7 +126,9 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      msg: "Dette blir bra!"
+      siteTitle: "Dette blir bra!",
+      lead:
+        "Lederhuset er en portal for ledere og arbeidsgivere med praktiske verktøy og juridisk veiledning samlet på et sted."
     };
   },
   beforeCreate: function() {

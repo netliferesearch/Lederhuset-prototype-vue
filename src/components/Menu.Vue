@@ -1,51 +1,28 @@
 <template>
-<div>
-
-    <nav>
-      <div class="item">
-        <router-link to="/">{{ sitetitle }}</router-link>
-      </div>
-
-      <div v-on:click="show = !show">
+  <div>
+      <nav>
         <div class="item">
-          <div class="lh-controller">
-            {{ MenuSymbol }}
-          </div>
+          <router-link to="/">{{ sitetitle }}</router-link>
         </div>
-      </div>
 
-    </nav>
 
-  <transition name="fade">
-    <div v-if="show">
-      <div class="lh-menu">
-          <ul>
-            <li><router-link to="/innlogget">Innlogget forside</router-link></li>
-            <li><router-link to="/ikke-innlogget">Ikke innlogget forside</router-link></li>
-            <li><router-link to="/tema-side">Tema side</router-link></li>
-          </ul>
-          <!-- <ais-index
-          app-id="latency"
-          api-key="3d9875e51fbd20c7754e65422f7ce5e1"
-          index-name="bestbuy"
-        >
-          <ais-search-box></ais-search-box>
-              <ais-results inline-template>
-                <table>
-                  <tbody>
-                    <tr v-for="result in results" :key="result.objectID">
-                      <td>{{ result.name }}</td>
-                      <td>{{ result.description }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </ais-results>
-        </ais-index> -->
-      </div>
-    </div>
-  </transition>
+          <div class="item">
+            <el-button type="text" @click="dialogVisible = true">Meny</el-button>
+            <el-dialog
+                title="Meny"
+                :visible.sync="dialogVisible"
+                fullscreen= true
+                :before-close="handleClose">
 
-</div>
+                <ul>
+                  <li><router-link to="/innlogget">Innlogget forside</router-link></li>
+                  <li><router-link to="/ikke-innlogget">Ikke innlogget forside</router-link></li>
+                  <li><router-link to="/tema-side">Tema side</router-link></li>
+                </ul>
+            </el-dialog>
+          </div>
+      </nav>
+  </div>
 </template>
 
 
@@ -56,7 +33,7 @@ export default {
     return {
       sitetitle: "Lederhuset",
       MenuSymbol: "Meny",
-      show: false
+      dialogVisible: false
     };
   }
 };
