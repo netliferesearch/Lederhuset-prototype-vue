@@ -18,7 +18,7 @@ export default {
 
 <style>
 :root {
-  --primary-color: red;
+  --primary-color: blue;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
