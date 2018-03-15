@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "NetlifeSans";
+  src: url("/assets/fonts/Netlife-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/Netlife-Regular.otf") format("opentype"),
+    url("/assets/fonts/Netlife-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-sans: "Netlife-Regular", sans-serif;
