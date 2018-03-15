@@ -8,10 +8,10 @@
 <script>
 /* eslint-disable */
 export default {
-  name: "HelloWorld",
+  name: "ThemeSite",
   data() {
     return {
-      msg: "Dette blir bra!"
+      msg: "Her er vi inne på en tema side"
     };
   }
 };

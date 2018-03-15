@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Lederhuset</h1>
+    <Menu />
     <!--
       Referance to image-link
       <img src="./assets/logo.png">
@@ -11,8 +11,12 @@
 
 <script>
 /* eslint-disable */
+import Menu from "./components/Menu.vue";
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    Menu
+  }
 };
 </script>
 

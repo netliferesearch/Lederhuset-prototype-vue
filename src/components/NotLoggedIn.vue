@@ -8,10 +8,10 @@
 <script>
 /* eslint-disable */
 export default {
-  name: "HelloWorld",
+  name: "NotLoggedIn",
   data() {
     return {
-      msg: "Dette blir bra!"
+      msg: "Her er vi ikke innlogga"
     };
   }
 };
