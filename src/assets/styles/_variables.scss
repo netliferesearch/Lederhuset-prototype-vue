@@ -1,11 +1,23 @@
 @font-face {
-  font-family: "NetlifeSans";
-  src: url("/assets/fonts/Netlife-Regular.eot?#iefix")
+  font-family: "Neutral";
+  src: url("/assets/fonts/NeutralBP.4cff5c9.eot?#iefix")
       format("embedded-opentype"),
-    url("/assets/fonts/Netlife-Regular.otf") format("opentype"),
-    url("/assets/fonts/Netlife-Regular.woff") format("woff");
+    url("/assets/fonts/NeutralBP.4cff5c9.otf") format("opentype"),
+    url("/assets/fonts/NeutralBP.4cff5c9.woff") format("woff");
+
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LarishNeueSemibold-Regular";
+  src: url("/assets/fonts/LarishNeueSemibold-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/LarishNeueSemibold-Regular.otf") format("opentype"),
+    url("/assets/fonts/LarishNeueSemibold-Regular.woff") format("woff");
+
   font-weight: normal;
   font-style: normal;
 }
 
-$font-sans: "Netlife-Regular", sans-serif;
+$font-sans: "Neutral", sans-serif;
+$font-serif: "Larish-Neue", serif;

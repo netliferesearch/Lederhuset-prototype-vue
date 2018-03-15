@@ -13,6 +13,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "vue": "^2.5.2",
+    "vue-drawer": "^0.1.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -67,5 +68,9 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
