@@ -1,11 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <h1>Lederhuset</h1>
+    <!--
+      Referance to image-link
+      <img src="./assets/logo.png">
+    -->
     <router-view/>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: "App"
 };
