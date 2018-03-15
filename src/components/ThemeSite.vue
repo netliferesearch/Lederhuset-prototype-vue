@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{data.title}}</h1>
+    <p>{{data.ingress}}</p>
 
   </div>
 </template>
@@ -23,7 +24,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-h1 {
-  color: white;
-}
+
 </style>
