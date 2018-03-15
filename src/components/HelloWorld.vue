@@ -11,22 +11,22 @@
     <br>
     <el-row :gutter="40">
       <el-col :xs="24" :sm="6" :md="4" :lg="3" :xl="1">
-        <div class="grid-content bg-purple">
+        <div class="grid-content ">
         Hallo
         </div>
       </el-col>
       <el-col :xs="24" :sm="6" :md="8" :lg="9" :xl="11">
-        <div class="grid-content bg-purple-light">
+        <div class="grid-content">
         Hallo
         </div>
       </el-col>
       <el-col :xs="24" :sm="6" :md="8" :lg="9" :xl="11">
-        <div class="grid-content bg-purple">
+        <div class="grid-content">
         Hallo
         </div>
       </el-col>
       <el-col :xs="24" :sm="6" :md="4" :lg="3" :xl="1">
-        <div class="grid-content bg-purple-light">
+        <div class="grid-content">
         Hallo
         </div>
       </el-col>
@@ -39,33 +39,61 @@
     <template slot="title">
       Før du ansetter
     </template>
-    <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
-    <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+    <div>
+      Consistent with real life: in line with the process and
+      logic of real life, and comply with languages and habits
+      that the users are used to;
+    </div>
+    <div>
+      Consistent within interface: all elements should be
+      consistent, such as: design style, icons and texts,
+      position of elements, etc.
+    </div>
   </el-collapse-item>
 
   <el-collapse-item name="2">
     <template slot="title">
       Oppfølging av midlertidige ansatte
     </template>
-    <div>Operation feedback: enable the users to clearly perceive their operations by style updates and interactive effects;</div>
-    <div>Visual feedback: reflect current state by updating or rearranging elements of the page.</div>
+    <div>
+      Operation feedback: enable the users to clearly
+      perceive their operations by style updates and
+      interactive effects;
+    </div>
+    <div>
+      Visual feedback: reflect current state by
+      updating or rearranging elements of the
+      page.
+    </div>
   </el-collapse-item>
 
   <el-collapse-item name="3">
     <template slot="title">
       Tips for å lykkes
     </template>
-    <div>Simplify the process: keep operating process simple and intuitive;</div>
-    <div>Definite and clear: enunciate your intentions clearly so that the users can quickly understand and make decisions;</div>
-    <div>Easy to identify: the interface should be straightforward, which helps the users to identify and frees them from memorizing and recalling.</div>
+    <div>
+      Simplify the process: keep operating process simple and intuitive;
+    </div>
+    <div>
+      Definite and clear: enunciate your intentions
+      clearly so that the users can quickly understand
+      and make decisions;
+    </div>
   </el-collapse-item>
 
   <el-collapse-item name="4">
     <template slot="title">
       Maler
     </template>
-    <div>Decision making: giving advices about operations is acceptable, but do not make decisions for the users;</div>
-    <div>Controlled consequences: users should be granted the freedom to operate, including canceling, aborting or terminating current operation.</div>
+    <div>
+      Decision making: giving advices about operations
+      is acceptable, but do not make decisions for the users;
+    </div>
+    <div>
+      Controlled consequences: users should be granted
+      the freedom to operate, including canceling, aborting
+      or terminating current operation.
+    </div>
   </el-collapse-item>
 
 </el-collapse>
@@ -92,18 +120,10 @@ export default {
 .el-col {
   border-radius: 4px;
 }
-.bg-purple-dark {
-  background: #99a9bf;
-}
-.bg-purple {
-  background: #d3dce6;
-}
-.bg-purple-light {
-  background: #e5e9f2;
-}
 .grid-content {
   border-radius: 4px;
   min-height: 36px;
+  border: 1px solid black;
 }
 
 .el-collapse-item__header {
