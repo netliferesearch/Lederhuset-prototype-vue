@@ -24,7 +24,7 @@
             <li><router-link to="/ikke-innlogget">Ikke innlogget forside</router-link></li>
             <li><router-link to="/tema-side">Tema side</router-link></li>
           </ul>
-          <ais-index
+          <!-- <ais-index
           app-id="latency"
           api-key="3d9875e51fbd20c7754e65422f7ce5e1"
           index-name="bestbuy"
@@ -40,7 +40,7 @@
                   </tbody>
                 </table>
               </ais-results>
-        </ais-index>
+        </ais-index> -->
       </div>
     </div>
   </transition>
@@ -48,10 +48,10 @@
 </div>
 </template>
 
+
 <script>
 /* eslint-disable */
-
-module.exports = {
+export default {
   data() {
     return {
       sitetitle: "Lederhuset",
@@ -61,6 +61,7 @@ module.exports = {
   }
 };
 </script>
+
 
 <style lang="scss" scoped>
 .fade-enter-active,

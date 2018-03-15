@@ -11,7 +11,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.2.2",
     "express": "^4.16.3",
+    "v-autocomplete": "^1.8.2",
     "vue": "^2.5.2",
     "vue-drawer": "^0.1.0",
     "vue-instantsearch": "^1.5.1",
