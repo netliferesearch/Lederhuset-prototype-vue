@@ -1,21 +1,26 @@
 <template>
 <div>
-   <div v-on:click="show = !show">
-      <nav>
-        <div class="item">
-            <router-link to="/">{{ sitetitle }}</router-link>
-        </div>
+
+    <nav>
+      <div class="item">
+        <router-link to="/">{{ sitetitle }}</router-link>
+      </div>
+
+      <div v-on:click="show = !show">
         <div class="item">
           <div class="lh-controller">
             {{ MenuSymbol }}
           </div>
         </div>
+      </div>
+
     </nav>
-  </div>
+
   <transition name="fade">
     <div v-if="show">
       <div class="lh-menu">
           <ul>
+
             <li><router-link to="/innlogget">Innlogget forside</router-link></li>
             <li><router-link to="/ikke-innlogget">Ikke innlogget forside</router-link></li>
             <li><router-link to="/tema-side">Tema side</router-link></li>
