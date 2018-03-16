@@ -23,7 +23,7 @@
               <div class="modal" v-show="show" v-on:click="toggle">
                 <div class="modal-message">
                   <div class="modal-header">
-                    <h2>Vue Modal</h2>
+                    <h2>Meny</h2>
                   </div>
 
                   <div class="modal-body">
