@@ -1,5 +1,9 @@
+@import "reset";
 @import "variables";
 
 @import "global/main";
+@import "global/type";
 @import "global/themes";
 @import "components/nav";
+@import "components/hero";
+@import "components/collapse";

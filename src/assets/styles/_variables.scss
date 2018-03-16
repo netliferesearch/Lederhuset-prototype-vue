@@ -19,5 +19,31 @@
   font-style: normal;
 }
 
-$font-sans: "Neutral", sans-serif;
-$font-serif: "Larish-Neue", serif;
+:root {
+  /* Colors */
+  --color-primary: pink;
+
+  /* Fonts */
+  --Sans: "Neutral", sans-serif;
+  --Serif: "Larish-Neue";
+
+  /* Font Sizes */
+  --main-font-size: calc(14px + 3 * ((100vw - 420px) / 860));
+
+  --xs: 440px;
+  --md: 620px;
+  --lg: 1000px;
+  --xl: 1280px;
+
+  /* Spacings */
+  --spacing: 24px;
+  /* Wrapper Padding*/
+  --p-line-height: 1.6;
+  --p-font-size: 1rem;
+  --h1-line-height: 1.2;
+  --h1-font-size: 1.8rem;
+  --h2-line-height: 1.35;
+  --h2-font-size: 1.2rem;
+  --h3-line-height: 1.05;
+  --h3-font-size: 0.9rem;
+}

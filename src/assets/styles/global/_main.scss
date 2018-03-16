@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: $font-sans;
+  font-family: var(--Sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
@@ -16,8 +16,5 @@ img {
   height: auto;
 }
 
-h1 {
-  font-family: $font-serif;
-}
 #app {
 }

@@ -1,5 +1,6 @@
 {
   "id": 1,
-  "title": "Ferie",
-  "ingress": "En eller annen lang ingress om ett eller annet."
+  "siteTitle": "Ansette midlertidig",
+  "lead": "En eller annen lang ingress om ett eller annet.",
+  "sectionOneTitle": "Før du ansetter noen midlertidig"
 }
