@@ -68,7 +68,7 @@
 
             <v-collapse-wrapper>
                 <div class="lh-collapse__header" v-collapse-toggle>
-                  <p>Vis lovtekst</p>
+                  <u>Vis lovtekst</u>
                 </div>
 
                 <div class="my-content" v-collapse-content>

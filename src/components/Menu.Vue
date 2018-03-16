@@ -7,7 +7,7 @@
         </div>
 
         <div class="item">
-          <router-link to="/"><h2>{{ sitetitle }}</h2></router-link>
+          <router-link to="/"><h3>{{ sitetitle }}</h3></router-link>
         </div>
 
         <div class="item">
