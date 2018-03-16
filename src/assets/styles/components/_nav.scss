@@ -1,35 +1,62 @@
-nav {
-  display: flex;
-  margin-bottom: 80px;
-  & :nth-of-type(1) {
-    flex-grow: 3;
-  }
-  a {
-    font-size: 1rem;
-    margin-right: 20px;
-  }
-}
-
 .lh-menu {
-  height: 100vh;
-  width: 100vw;
-  background: red;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  z-index: 10;
   display: flex;
-  margin-bottom: 80px;
-  & :nth-of-type(1) {
-    flex-grow: 3;
-  }
-  a {
-    color: blue !important;
-    font-size: 1rem;
-    margin-right: 20px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: 2% auto;
+}
+
+.button-primary {
+  width: 200px;
+  margin: auto;
+  background: transparent;
+  border: none;
+
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  background: salmon;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 3000px rgba(153, 222, 100, 0.5);
+  .modal-exit {
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
   }
 }
 
-.lh-controller {
-  z-index: 100;
+.modal-message {
+  margin: auto;
+  color: whitesmoke;
+  h2 {
+    text-align: center;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }

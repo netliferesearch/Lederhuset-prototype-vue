@@ -1,6 +1,18 @@
 <template>
   <div class="light">
-
+      <scrollactive
+      class="my-nav"
+      v-on:itemchanged="onItemChanged"
+      active-class="active"
+      :offset="10"
+      :duration="800"
+      bezier-easing-value=".5,0,.35,1"
+      >
+  <a href="#one" class="scrollactive-item">Før du ansetter noen midlertidig</a>
+  <a href="#two" class="scrollactive-item">God oppfølging</a>
+  <a href="#three" class="scrollactive-item">Tips for å lykkes</a>
+  <a href="#four" class="scrollactive-item">Last ned maler</a>
+</scrollactive>
 
         <div class="lh-hero">
 
@@ -31,7 +43,7 @@
           </div>
         </div>
 
-        <div class="lh-block__content">
+        <div class="lh-block__content" id="one">
             <h1>1. <br>
             Før du ansetter noen midlertidig
             </h1>
@@ -72,7 +84,7 @@
             </v-collapse-wrapper>
         </div>
 
-            <div class="lh-block__content">
+            <div class="lh-block__content" id="two">
               <h1>2. <br>
               God Oppfølging
               </h1>
@@ -123,6 +135,11 @@ export default {
       data
     };
   },
+  methods: {
+    onItemChanged(event, currentItem, lastActiveItem) {
+      // your logic
+    }
+  },
   beforeCreate: function() {
     document.body.className = "light";
   }
@@ -131,5 +148,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-
+.my-nav {
+  background: white;
+  position: fixed;
+  bottom: 0;
+}
+.active {
+  color: green;
+}
 </style>
