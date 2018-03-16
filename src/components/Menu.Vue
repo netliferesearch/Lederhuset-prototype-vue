@@ -1,6 +1,6 @@
 <template>
-
     <div>
+
       <div class="lh-menu">
         <div class="item">
           <router-link to="/">Kontakt oss</router-link>

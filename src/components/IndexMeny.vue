@@ -115,7 +115,6 @@
         </div>
     </v-collapse-wrapper>
 
-    <div class="spacetest"></div>
   </div>
 </template>
 
@@ -149,21 +148,5 @@ export default {
   transition: max-height 0.3s ease-in;
   min-height: 500px;
   max-height: 100%;
-}
-.spacetest {
-  width: 100%;
-  height: 4000px;
-  background: gray;
-}
-.vue-affix {
-  width: 100%;
-}
-.affix-top {
-}
-.affix {
-  background: green;
-  top: 0px !important;
-}
-.affix-bottom {
 }
 </style>

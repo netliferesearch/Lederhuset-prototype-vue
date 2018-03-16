@@ -28,12 +28,21 @@
   flex-direction: row;
   justify-content: center;
   margin: auto;
-  width: 80vw;
-  height: 80vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: salmon;
   border-radius: 3px;
   cursor: pointer;
   box-shadow: 0px 0px 0px 3000px rgba(153, 222, 100, 0.5);
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .modal-exit {
     position: absolute;
     right: 0;

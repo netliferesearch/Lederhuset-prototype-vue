@@ -32,7 +32,7 @@
         <div class="lh-block__content">
           <div class="lh-block__grid">
             <div class="lh-block__grid--item">
-              <h2>Kort sagt</h2>
+              <h3>Kort sagt</h3>
             </div>
             <div class="lh-block__grid--item">
               <p>For å ansette midlertidig må arbeidsoppgavene være midlertidige
@@ -50,16 +50,18 @@
         </div>
 
         <div class="lh-block__content">
-            <strong>Krav til deg som ansetter</strong>
+          <div class="lh-block__textBlock">
+            <h3>Kanskje enda en tittel her først</h3>
+            <h4>Krav til deg som ansetter</h4>
             <p>Dersom du avslutter arbeidsforholdet, inntrer en karantene i
               en periode på tolv måneder.I perioden kan du ikke ansette
               andre til de samme arbeidsoppgavene
             </p>
 
-            <strong>Ikke ha mange midlertidig ansatte</strong>
+            <h4>Ikke ha mange midlertidig ansatte</h4>
             <p>Du kan ikke ha mer enn 15 prosent av arbeidstakerne på slike kontrakter.</p>
 
-            <strong>Oppsigelsestid</strong>
+            <h4>Oppsigelsestid</h4>
             <p>Du må varsle skriftlig senest 1 måned før fratredelsestidspunktet,
               dersom en person har vært ansatt i mer enn 1 år.
             </p>
@@ -71,7 +73,7 @@
 
                 <div class="my-content" v-collapse-content>
 
-                  <strong>Lov om midlertidig ansettelse</strong>
+                  <h4>Lov om midlertidig ansettelse</h4>
                     <p>Dersom en midlertidig ansettelse har vart mer enn fire år
                       sammenhengende, skal du behandle den ansatte som fast ansatt
                       når arbeidsforholdet bir avsluttet. Dersom en midlertidig ansettelse
@@ -82,6 +84,7 @@
                     <p>Kilde: <a href="#">Lovdata.no</a></p>
                 </div>
             </v-collapse-wrapper>
+             </div>
         </div>
 
             <div class="lh-block__content" id="two">
@@ -91,34 +94,61 @@
             </div>
 
             <div class="lh-block__content">
-              <strong>Krav til deg som ansetter</strong>
-              <p>Gjør vedkommende i stand til å tilpasse seg arbeidsstedet og
-                arbeidsoppgavene på en effektiv og god måte.
-              </p>
+              <div class="lh-block__textBlock">
+                  <h4>Krav til deg som ansetter</h4>
+                  <p>Gjør vedkommende i stand til å tilpasse seg arbeidsstedet og
+                    arbeidsoppgavene på en effektiv og god måte.
+                  </p>
 
-              <p>Gi den ansatte muligheten til å sette seg inn i reglene på arbeidsplassen,
-                for eksempel eventuell tariffavtale, personalhåndbok, arbeidsreglement,
-                HMS-rutiner, arbeidsrutiner, øvrige sikkerhetsrutiner og annet som
-                er relevant.
-              </p>
+                  <p>Gi den ansatte muligheten til å sette seg inn i reglene på arbeidsplassen,
+                    for eksempel eventuell tariffavtale, personalhåndbok, arbeidsreglement,
+                    HMS-rutiner, arbeidsrutiner, øvrige sikkerhetsrutiner og annet som
+                    er relevant.
+                  </p>
 
-              <strong>Styr forventninger</strong>
-              <p>Tydeliggjør forventninger om hvordan vedkommende skal representere
-                virksomheten din utad, om eventuelle individuelle mål, hvordan arbeidet
-                skal utføres og hvordan du vil at hun eller han samhandler og rapporterer
-                internt. Vær så konkret som mulig, og still spørsmål om noe oppleves som
-                uklart.
-              </p>
+                  <h4>Styr forventninger</h4>
+                  <p>Tydeliggjør forventninger om hvordan vedkommende skal representere
+                    virksomheten din utad, om eventuelle individuelle mål, hvordan arbeidet
+                    skal utføres og hvordan du vil at hun eller han samhandler og rapporterer
+                    internt. Vær så konkret som mulig, og still spørsmål om noe oppleves som
+                    uklart.
+                  </p>
 
-              <strong>Lag tydelige rammer for opplæringen</strong>
-              <p>Informer om hvordan opplæring skal foregå, og hvilken rutine dere
-                skal ha for tilbakemelding om hvordan tilpasningen til den nye jobben
-                går.
-              </p>
+                  <h4>Lag tydelige rammer for opplæringen</h4>
+                  <p>Informer om hvordan opplæring skal foregå, og hvilken rutine dere
+                    skal ha for tilbakemelding om hvordan tilpasningen til den nye jobben
+                    går.
+                  </p>
+              </div>
 
-              <strong>Last ned mal</strong>
-              <a href="#">Midlertidig ansettelse</a>
-              <p>Word-dokument</p>
+
+              <div class="lh-block__grid">
+                  <div class="lh-block__grid--item">
+                    <img src="../assets/hockey.gif">
+                  </div>
+                  <div class="lh-block__grid--item">
+                    <h4>Last ned mal</h4>
+                    <a href="#">Midlertidig ansettelse</a>
+                    <p>Word-dokument</p>
+                  </div>
+              </div>
+
+            </div>
+
+            <div class="lh-block__content">
+              <div class="lh-block__factBox">
+                <h4>Fakta</h4>
+                <p>Vanligvis skal du gi fast ansettelse til folk. Det finnes likevel
+                noen unntak hvor du har lov til å gi midlertidig ansettelse:</p>
+                <ul>
+                  <li>arbeid av midlertidig karakter (f.eks. sesongarbeid)</li>
+                  <li>en annen ansatt (vikariat)</li>
+                  <li>praksisarbeid</li>
+                  <li>deltakelse i arbeidsmarkedstiltak</li>
+                  <li>arbeid med organisert idrett</li>
+                  <li>behov for kortvarig arbeidskraft (inntil 12 mnd.)</li>
+                </ul>
+              </div>
             </div>
 
       </div>
