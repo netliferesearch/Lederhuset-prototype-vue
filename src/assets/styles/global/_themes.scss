@@ -1,17 +1,16 @@
-.lh-block {
-  // border: 1px solid;
+.row {
+  padding: 0 0 calc(var(--spacing) * 4) 0;
+}
 
+.hero {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.lh-block {
   a {
     text-decoration: underline;
   }
   &__content {
-    margin: calc(var(--spacing) * 4) 0;
-    padding: 0 calc(var(--spacing) * 1);
-
-    @media screen and (min-width: 600px) {
-      padding: 0 calc(var(--spacing) * 10);
-    }
-
     h1 {
       padding: calc(var(--spacing) * 4) 0;
       border-top: 1px solid;
@@ -20,29 +19,9 @@
     }
   }
 
-  &__textBlock {
-    margin: 10px auto;
-    max-width: 30rem;
-  }
-
-  &__grid {
-    display: flex;
-
-    img {
-      max-height: 200px;
-    }
-    p {
-      margin-top: 0px;
-    }
-
-    &--item {
-      flex: 1;
-      // border: 1px solid;
-    }
-  }
-
   &__factBox {
-    background-color: pink;
+    background-color: var(--color-primary);
+
     padding: calc(var(--spacing) * 4);
   }
 }
@@ -51,6 +30,7 @@ blockquote {
   font-size: 3rem;
   font-family: var(--Serif);
 }
+
 .light {
   background-color: #fafafa;
 }

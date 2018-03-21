@@ -1,13 +1,6 @@
 .lh-hero {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  flex-direction: column;
   background-color: var(--color-primary);
-
   padding: 0 calc(var(--spacing) * 2);
-  height: 90vh;
-  width: 90vw;
 
   @media screen and (min-width: 576px) {
     padding: 0 calc(var(--spacing) * 4);

@@ -15,44 +15,47 @@
   <a href="#four" class="scrollactive-item">4. Last ned maler</a>
 </scrollactive>
 
-        <div class="lh-hero">
+          <container hero="true" class="lh-hero">
+            <row>
+                <column>
+                  <h1>{{data.siteTitle}}</h1>
+                 <p>{{data.lead}}</p>
 
-            <h1>{{data.siteTitle}}</h1>
-            <p>{{data.lead}}</p>
+                <ol>
+                  <li>Før du ansetter midlertidig</li>
+                  <li>God oppfølging</li>
+                  <li>Tips for å lykkes</li>
+                  <li>Last ned maler om «ferie»</li>
+                </ol>
+                </column>
+            </row>
+          </container>
 
-            <ol>
-              <li>Før du ansetter midlertidig</li>
-              <li>God oppfølging</li>
-              <li>Tips for å lykkes</li>
-              <li>Last ned maler om «ferie»</li>
-            </ol>
-
-        </div>
-
-      <div class="lh-block">
-        <div class="lh-block__content">
-          <div class="lh-block__grid">
-            <div class="lh-block__grid--item">
-              <h3>Kort sagt</h3>
-            </div>
-            <div class="lh-block__grid--item">
-              <p>For å ansette midlertidig må arbeidsoppgavene være midlertidige
+          <container class="lh-block">
+            <row>
+                <column xs="12" sm="2" xsOffset="3">
+                  <h3>Kort sagt</h3>
+                </column>
+                <column xs="12" sm="4">
+                  <p>For å ansette midlertidig må arbeidsoppgavene være midlertidige
                 eller sesongbaserte.Din motivasjon kan ikke være å omgå
                 oppsigelsesvernet, eller å gjøre det lett å
                 avslutte arbeidsforhold.</p>
-            </div>
-          </div>
-        </div>
+                </column>
+            </row>
+          </container>
 
-        <div class="lh-block__content" id="one">
-            <h1>1. <br>
-            Før du ansetter noen midlertidig
-            </h1>
-        </div>
-
-        <div class="lh-block__content">
-          <div class="lh-block__textBlock">
-            <h3>Kanskje enda en tittel her først</h3>
+          <container class="lh-block">
+            <row id="one">
+                <column sm="10" smOffset="1" class="lh-block__content">
+                  <h1>1. <br>
+                    Før du ansetter noen midlertidig
+                 </h1>
+                </column>
+            </row>
+            <row>
+                <column sm="6" smOffset="3">
+                  <h3>Kanskje enda en tittel her først</h3>
             <h4>Krav til deg som ansetter</h4>
             <p>Dersom du avslutter arbeidsforholdet, inntrer en karantene i
               en periode på tolv måneder.I perioden kan du ikke ansette
@@ -85,17 +88,21 @@
                     <p>Kilde: <a href="#">Lovdata.no</a></p>
                 </div>
             </v-collapse-wrapper>
-             </div>
-        </div>
+                </column>
+            </row>
+          </container>
 
-            <div class="lh-block__content" id="two">
-              <h1>2. <br>
-              God Oppfølging
-              </h1>
-            </div>
 
-            <div class="lh-block__content">
-              <div class="lh-block__textBlock">
+          <container class="lh-block">
+            <row id="two">
+                <column sm="10" smOffset="1" class="lh-block lh-block__content">
+                  <h1>2. <br>
+                    God Oppfølging
+                 </h1>
+                </column>
+            </row>
+            <row>
+                <column sm="6" smOffset="3">
                   <h4>Krav til deg som ansetter</h4>
                   <p>Gjør vedkommende i stand til å tilpasse seg arbeidsstedet og
                     arbeidsoppgavene på en effektiv og god måte.
@@ -106,10 +113,17 @@
                     HMS-rutiner, arbeidsrutiner, øvrige sikkerhetsrutiner og annet som
                     er relevant.
                   </p>
-                  </div>
-<blockquote>Vær så konkret som mulig, og still spørsmål om noe oppleves som
-                    uklart.</blockquote>
-                    <div class="lh-block__textBlock">
+                </column>
+            </row>
+
+            <row>
+              <blockquote>
+                Vær så konkret som mulig, og still spørsmål om noe oppleves som uklart.
+              </blockquote>
+            </row>
+
+            <row>
+                <column sm="6" smOffset="3">
                   <h4>Styr forventninger</h4>
                   <p>Tydeliggjør forventninger om hvordan vedkommende skal representere
                     virksomheten din utad, om eventuelle individuelle mål, hvordan arbeidet
@@ -123,24 +137,25 @@
                     skal ha for tilbakemelding om hvordan tilpasningen til den nye jobben
                     går.
                   </p>
-              </div>
+                </column>
+            </row>
 
-              <div class="lh-block__grid">
-                  <div class="lh-block__grid--item">
-                    <img src="../assets/hockey.gif">
-                  </div>
-                  <div class="lh-block__grid--item" id="three">
-                    <h4>Last ned mal</h4>
+            <row id="three">
+                <column xs="12" sm="2" xsOffset="3">
+                  <img src="../assets/hockey.gif">
+                </column>
+                <column xs="12" sm="4">
+                  <h4>Last ned mal</h4>
                     <a href="#">Midlertidig ansettelse</a>
                     <p>Word-dokument</p>
-                  </div>
-              </div>
+                </column>
+            </row>
+          </container>
 
-            </div>
-
-            <div class="lh-block__content" id="four">
-              <div class="lh-block__factBox">
-                <h4>Fakta</h4>
+          <container class="lh-block">
+          <row id="four">
+                <column sm="6" smOffset="3" class="lh-block__factBox">
+                  <h4>Fakta</h4>
                 <p>Vanligvis skal du gi fast ansettelse til folk. Det finnes likevel
                 noen unntak hvor du har lov til å gi midlertidig ansettelse:</p>
                 <ul>
@@ -151,10 +166,10 @@
                   <li>arbeid med organisert idrett</li>
                   <li>behov for kortvarig arbeidskraft (inntil 12 mnd.)</li>
                 </ul>
-              </div>
-            </div>
+                </column>
+            </row>
+            </container>
 
-      </div>
   </div>
 </template>
 
@@ -163,6 +178,7 @@
 import data from "@/assets/data/data.json";
 export default {
   name: "ThemeSite",
+  props: {},
   data() {
     return {
       data

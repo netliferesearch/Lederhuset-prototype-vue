@@ -5,8 +5,8 @@
 
     <container>
       <row>
-          <column>1</column>
-          <column>1</column>
+          <column xs="12" sm="6">1</column>
+          <column xs="12" sm="6">2</column>
       </row>
     </container>
 
@@ -32,8 +32,8 @@
 /* eslint-disable */
 export default {
   props: {
-    hero: true,
-    xs: "6"
+    xs: "12",
+    sm: "6"
   },
   name: "HelloWorld",
   data() {
