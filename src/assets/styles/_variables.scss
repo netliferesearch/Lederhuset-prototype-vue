@@ -21,7 +21,7 @@
 
 :root {
   /* Colors */
-  --color-primary: pink;
+  --color-primary: #ffd900;
 
   /* Fonts */
   --Sans: "Neutral", sans-serif;
@@ -43,7 +43,13 @@
   --h1-line-height: 1.2;
   --h1-font-size: 1.8rem;
   --h2-line-height: 1.35;
-  --h2-font-size: 1.2rem;
+  --h2-font-size: 1rem;
   --h3-line-height: 1.05;
-  --h3-font-size: 0.9rem;
+  --h3-font-size: 0.5rem;
+
+  /* Breakpoints */
+  --breakpoint-xs: 576px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 992px;
+  --breakpoint-lg: 1200px;
 }

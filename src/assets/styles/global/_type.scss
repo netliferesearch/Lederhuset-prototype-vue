@@ -40,18 +40,18 @@ h6 + * {
 }
 
 h1 {
-  font-size: calc(var(--h1-font-size) * 3);
+  font-size: calc(var(--h1-font-size) * 1);
   line-height: var(--h1-line-height);
-  @media screen and (max-width: 600px) {
-    font-size: calc(var(--h1-font-size) * 1);
+  @media screen and (min-width: 768px) {
+    font-size: calc(var(--h1-font-size) * 3);
   }
 }
 
 h2 {
   font-size: calc(var(--h2-font-size) * 2);
   line-height: var(--h2-line-height);
-  @media screen and (max-width: 600px) {
-    font-size: calc(var(--h2-font-size) * 2);
+  @media screen and (min-width: 768px) {
+    font-size: calc(var(--h2-font-size) * 3);
     line-height: var(--h2-line-height);
   }
 }
@@ -59,8 +59,8 @@ h2 {
 h3 {
   font-size: calc(var(--h3-font-size) * 2);
   line-height: var(--h3-line-height);
-  @media screen and (max-width: 600px) {
-    font-size: calc(var(--h3-font-size) * 2);
+  @media screen and (min-width: 768px) {
+    font-size: calc(var(--h3-font-size) * 3);
     line-height: var(--h3-line-height);
   }
 }

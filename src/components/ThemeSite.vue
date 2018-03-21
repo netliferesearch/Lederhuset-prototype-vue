@@ -1,6 +1,6 @@
 <template>
   <div class="light">
-      <scrollactive
+  <scrollactive
       class="my-nav"
       v-on:itemchanged="onItemChanged"
       active-class="active"
@@ -8,10 +8,11 @@
       :duration="800"
       bezier-easing-value=".5,0,.35,1"
       >
-  <a href="#one" class="scrollactive-item">Før du ansetter noen midlertidig</a>
-  <a href="#two" class="scrollactive-item">God oppfølging</a>
-  <a href="#three" class="scrollactive-item">Tips for å lykkes</a>
-  <a href="#four" class="scrollactive-item">Last ned maler</a>
+
+  <a href="#one" class="scrollactive-item">1. Før du ansetter noen midlertidig</a>
+  <a href="#two" class="scrollactive-item">2. God oppfølging</a>
+  <a href="#three" class="scrollactive-item">3. Tips for å lykkes</a>
+  <a href="#four" class="scrollactive-item">4. Last ned maler</a>
 </scrollactive>
 
         <div class="lh-hero">
@@ -105,7 +106,10 @@
                     HMS-rutiner, arbeidsrutiner, øvrige sikkerhetsrutiner og annet som
                     er relevant.
                   </p>
-
+                  </div>
+<blockquote>Vær så konkret som mulig, og still spørsmål om noe oppleves som
+                    uklart.</blockquote>
+                    <div class="lh-block__textBlock">
                   <h4>Styr forventninger</h4>
                   <p>Tydeliggjør forventninger om hvordan vedkommende skal representere
                     virksomheten din utad, om eventuelle individuelle mål, hvordan arbeidet
@@ -121,12 +125,11 @@
                   </p>
               </div>
 
-
               <div class="lh-block__grid">
                   <div class="lh-block__grid--item">
                     <img src="../assets/hockey.gif">
                   </div>
-                  <div class="lh-block__grid--item">
+                  <div class="lh-block__grid--item" id="three">
                     <h4>Last ned mal</h4>
                     <a href="#">Midlertidig ansettelse</a>
                     <p>Word-dokument</p>
@@ -135,7 +138,7 @@
 
             </div>
 
-            <div class="lh-block__content">
+            <div class="lh-block__content" id="four">
               <div class="lh-block__factBox">
                 <h4>Fakta</h4>
                 <p>Vanligvis skal du gi fast ansettelse til folk. Det finnes likevel
@@ -181,9 +184,20 @@ export default {
 .my-nav {
   background: white;
   position: fixed;
-  bottom: 0;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  // text-align: center;
+  width: 100%;
+  a {
+    font-size: 16px;
+    color: #000000;
+    border-right: 1px solid;
+    padding: 0 10px;
+  }
 }
 .active {
-  color: green;
+  color: #a50e68 !important;
+  border-right: 1px solid green;
 }
 </style>

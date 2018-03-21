@@ -3,9 +3,13 @@
 import Vue from 'vue';
 import VueCollapse from 'vue2-collapse';
 import VueScrollactive from 'vue-scrollactive';
+import VueFlexboxgrid from 'vue-flexboxgrid';
+import 'vue-flexboxgrid/dist/vue-flexboxgrid.css';
 
 import App from './App';
 import router from './router';
+
+Vue.use(VueFlexboxgrid);
 
 Vue.use(VueScrollactive);
 Vue.use(VueCollapse);

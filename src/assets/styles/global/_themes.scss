@@ -21,13 +21,16 @@
   }
 
   &__textBlock {
-    margin: 0 auto;
+    margin: 10px auto;
     max-width: 30rem;
   }
 
   &__grid {
     display: flex;
 
+    img {
+      max-height: 200px;
+    }
     p {
       margin-top: 0px;
     }
@@ -44,6 +47,10 @@
   }
 }
 
+blockquote {
+  font-size: 3rem;
+  font-family: var(--Serif);
+}
 .light {
   background-color: #fafafa;
 }
