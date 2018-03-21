@@ -18,22 +18,22 @@ export default {
     return {
       options: [
         {
-          title: "Read the Docs",
+          title: "Ferie",
           icon: "fa-book",
           url: "https://codeclimate.com/github/sagalbot/vue-select"
         },
         {
-          title: "View on GitHub",
+          title: "Ansettelse",
           icon: "fa-github",
           url: "https://codeclimate.com/github/sagalbot/vue-select"
         },
         {
-          title: "View on NPM",
+          title: "Avskaffelse",
           icon: "fa-database",
           url: "https://codeclimate.com/github/sagalbot/vue-select"
         },
         {
-          title: "View Codepen Examples",
+          title: "Sykemelding",
           icon: "fa-pencil",
           url: "https://codeclimate.com/github/sagalbot/vue-select"
         }
