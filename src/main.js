@@ -7,10 +7,12 @@ import VueFlexboxgrid from 'vue-flexboxgrid';
 import 'vue-flexboxgrid/dist/vue-flexboxgrid.css';
 import VueScrollReveal from 'vue-scroll-reveal';
 import VueAffix from 'vue-affix';
+import vSelect from 'vue-select';
 
 import App from './App';
 import router from './router';
 
+Vue.component('v-select', vSelect);
 Vue.use(VueScrollReveal, {
   duration: 800,
   scale: 1,

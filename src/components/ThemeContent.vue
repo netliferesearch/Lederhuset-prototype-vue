@@ -111,7 +111,7 @@
 
             <row id="three">
                 <column xs="12" sm="2" xsOffset="3">
-                  <img src="../assets/hockey.gif">
+                  <ImageComponent :url="require('../assets/images/hockey.gif')"/>
                 </column>
                 <column xs="12" sm="4">
                   <h4>Last ned mal</h4>
@@ -129,6 +129,7 @@
 /* eslint-disable */
 import data from "@/assets/data/data.json";
 import ThemeFacts from "./ThemeFacts.vue";
+import ImageComponent from "./ImageComponent.vue";
 export default {
   name: "ThemeContent",
   data() {
@@ -137,7 +138,8 @@ export default {
     };
   },
   components: {
-    ThemeFacts
+    ThemeFacts,
+    ImageComponent
   }
 };
 </script>

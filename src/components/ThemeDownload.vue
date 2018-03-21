@@ -1,5 +1,5 @@
 <template>
-        <container class="lh-block">
+        <container class="lh-block lh-block__download">
                  <row>
                     <column sm="3">Last ned</column>
                     <column sm="3">Last ned</column>
