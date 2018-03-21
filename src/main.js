@@ -5,12 +5,21 @@ import VueCollapse from 'vue2-collapse';
 import VueScrollactive from 'vue-scrollactive';
 import VueFlexboxgrid from 'vue-flexboxgrid';
 import 'vue-flexboxgrid/dist/vue-flexboxgrid.css';
+import VueScrollReveal from 'vue-scroll-reveal';
+import VueAffix from 'vue-affix';
 
 import App from './App';
 import router from './router';
 
-Vue.use(VueFlexboxgrid);
+Vue.use(VueScrollReveal, {
+  duration: 800,
+  scale: 1,
+  distance: '10px',
+  mobile: false,
+});
 
+Vue.use(VueFlexboxgrid);
+Vue.use(VueAffix);
 Vue.use(VueScrollactive);
 Vue.use(VueCollapse);
 Vue.config.productionTip = false;

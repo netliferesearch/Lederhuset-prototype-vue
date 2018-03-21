@@ -1,12 +1,24 @@
 <template>
   <div class="hello">
-    <h1>{{ siteTitle }}</h1>
-    <h2>{{ lead }}</h2>
+
+    <section>
+      <h1>Scroll down!</h1>
+    </section>
+
+    <section v-scroll-reveal.reset>
+      <h1>Tada!</h1>
+    </section>
+
+    <section v-scroll-reveal.reset>
+      <h1>Slightly late tada!</h1>
+    </section>
 
     <container>
       <row>
-          <column xs="12" sm="6">1</column>
-          <column xs="12" sm="6">2</column>
+          <column xs="12" sm="6">
+            <h2>{{ siteTitle }}</h2>
+            <p>{{ lead }}</p>
+          </column>
       </row>
     </container>
 
@@ -20,11 +32,7 @@
   <button @click="active = !active" :aria-pressed="active ? 'true' : 'false'">
     Gjør meg større
   </button>
-  <div :class="{ red: active }">
-    <button @click="active = !active" :aria-pressed="active ? 'true' : 'false'">
-    lukk meg igjen
-  </button>
-    Nå er jeg større</div>
+  <div :class="{ red: active }">Nå er jeg større</div>
   </div>
 </template>
 
@@ -35,7 +43,7 @@ export default {
     xs: "12",
     sm: "6"
   },
-  name: "HelloWorld",
+  name: "Home",
   data() {
     return {
       siteTitle: "Dette blir bra!",
@@ -51,11 +59,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .red {
-  background-color: red;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: var(--color-primary);
+  width: 300px;
+  height: 300px;
+  font-size: 30px;
 }
 </style>

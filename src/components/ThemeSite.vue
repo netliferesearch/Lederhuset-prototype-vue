@@ -1,20 +1,5 @@
 <template>
   <div class="light">
-  <scrollactive
-      class="my-nav"
-      v-on:itemchanged="onItemChanged"
-      active-class="active"
-      :offset="10"
-      :duration="800"
-      bezier-easing-value=".5,0,.35,1"
-      >
-
-  <a href="#one" class="scrollactive-item">1. Før du ansetter noen midlertidig</a>
-  <a href="#two" class="scrollactive-item">2. God oppfølging</a>
-  <a href="#three" class="scrollactive-item">3. Tips for å lykkes</a>
-  <a href="#four" class="scrollactive-item">4. Last ned maler</a>
-</scrollactive>
-
           <container hero="true" class="lh-hero">
             <row>
                 <column>
@@ -44,6 +29,33 @@
                 </column>
             </row>
           </container>
+
+
+          <affix
+            class="my-nav"
+            relative-element-selector="#theme-content"
+            :offset="{ top: 100, bottom: 40 }"
+          >
+
+                <scrollactive
+                    class="my-nav"
+                    v-on:itemchanged="onItemChanged"
+                    active-class="active"
+                    :offset="10"
+                    :duration="800"
+                    bezier-easing-value=".5,0,.35,1"
+                    >
+
+                <a href="#one" class="scrollactive-item">1. Før du ansetter noen midlertidig</a>
+                <a href="#two" class="scrollactive-item">2. God oppfølging</a>
+                <a href="#three" class="scrollactive-item">3. Tips for å lykkes</a>
+                <a href="#four" class="scrollactive-item">4. Last ned maler</a>
+              </scrollactive>
+
+          </affix>
+
+<div id="theme-content">
+
 
           <container class="lh-block">
             <row id="one">
@@ -169,6 +181,21 @@
                 </column>
             </row>
             </container>
+</div>
+            <container class="lh-block">
+                 <row>
+                    <column sm="3">Last ned</column>
+                    <column sm="3">Last ned</column>
+                    <column sm="3">Last ned</column>
+                    <column sm="3">Last ned</column>
+                 </row>
+                 <row>
+                    <column sm="3">Last ned</column>
+                    <column sm="3">Last ned</column>
+                    <column sm="3">Last ned</column>
+                    <column sm="3">Last ned</column>
+                 </row>
+              </container>
 
   </div>
 </template>
@@ -199,7 +226,6 @@ export default {
 <style lang="scss" scoped>
 .my-nav {
   background: white;
-  position: fixed;
   top: 0;
   left: 0;
   padding: 20px;

@@ -13,9 +13,11 @@
   "dependencies": {
     "express": "^4.16.3",
     "vue": "^2.5.2",
+    "vue-affix": "^0.2.4",
     "vue-flexbox": "^2.0.0",
     "vue-flexboxgrid": "^1.5.0",
     "vue-router": "^3.0.1",
+    "vue-scroll-reveal": "^1.0.7",
     "vue-scrollactive": "^0.6.1"
   },
   "devDependencies": {
