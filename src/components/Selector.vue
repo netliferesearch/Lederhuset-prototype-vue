@@ -6,10 +6,10 @@
       placeholder="Jeg har nettop ansatt noen for første gang 😬"
     >
       <template slot="option" slot-scope="option">
-        <a :href=option.link>
-          <h4>{{ option.title }}</h4>
-          <p>{{ option.lead }}</p>
-        </a>
+        <router-link to="/tema-side">
+          <p>{{ option.title }}<br />
+          {{ option.lead }}</p>
+        </router-link>
       </template>
     </v-select>
 </div>
@@ -25,22 +25,22 @@ export default {
         {
           title: "Ferie",
           lead: "En liten beskrivelse på temaet",
-          url: "https://www.nrk.no/"
+          url: "/tema-side"
         },
         {
           title: "Ansettelse",
           lead: "En liten beskrivelse på temaet",
-          url: "https://www.nrk.no/"
+          url: "/tema-side"
         },
         {
           title: "Avskaffelse",
           lead: "En liten beskrivelse på temaet",
-          url: "https://www.nrk.no/"
+          url: "/tema-side"
         },
         {
           title: "Sykemelding",
           lead: "En liten beskrivelse på temaet",
-          url: "https://www.nrk.no/"
+          url: "/tema-side"
         }
       ]
     };
