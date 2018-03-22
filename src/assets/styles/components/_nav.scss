@@ -1,7 +1,10 @@
 .lh-menu {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 2%;
   margin-bottom: 50px;
+
+  border-bottom: 1px solid;
 }
 
 .modal-container {
