@@ -3,7 +3,7 @@
 
       <div class="lh-menu">
         <div class="item">
-          <router-link to="/">Kontakt oss</router-link>
+          <router-link to="/kontakt-oss">Kontakt oss</router-link>
         </div>
 
         <div class="item">

@@ -1,12 +1,17 @@
 <template>
 <div>
-    <p>Søk</p>
-  <v-select :options="options" label="title">
-    <template slot="option" slot-scope="option" >
-        <span class="fa" :class="option.icon"></span>
-        {{ option.title }}
-    </template>
-  </v-select>
+    <v-select
+      :options="options"
+      label="title"
+      placeholder="Jeg har nettop ansatt noen for første gang 😬"
+    >
+      <template slot="option" slot-scope="option">
+        <a :href=option.link>
+          <h4>{{ option.title }}</h4>
+          <p>{{ option.lead }}</p>
+        </a>
+      </template>
+    </v-select>
 </div>
 </template>
 
@@ -19,23 +24,23 @@ export default {
       options: [
         {
           title: "Ferie",
-          icon: "fa-book",
-          url: "https://codeclimate.com/github/sagalbot/vue-select"
+          lead: "En liten beskrivelse på temaet",
+          url: "https://www.nrk.no/"
         },
         {
           title: "Ansettelse",
-          icon: "fa-github",
-          url: "https://codeclimate.com/github/sagalbot/vue-select"
+          lead: "En liten beskrivelse på temaet",
+          url: "https://www.nrk.no/"
         },
         {
           title: "Avskaffelse",
-          icon: "fa-database",
-          url: "https://codeclimate.com/github/sagalbot/vue-select"
+          lead: "En liten beskrivelse på temaet",
+          url: "https://www.nrk.no/"
         },
         {
           title: "Sykemelding",
-          icon: "fa-pencil",
-          url: "https://codeclimate.com/github/sagalbot/vue-select"
+          lead: "En liten beskrivelse på temaet",
+          url: "https://www.nrk.no/"
         }
       ]
     };
