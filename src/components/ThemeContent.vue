@@ -1,5 +1,6 @@
 <template>
     <div>
+       <ThemeNav />
         <container class="lh-block">
             <row>
                 <column xs="12" sm="2" xsOffset="3">
@@ -40,6 +41,7 @@
             </p>
                 </column>
             </row>
+
 
             <row>
               <column sm="6" smOffset="3">
@@ -168,6 +170,7 @@ import data from "@/assets/data/data.json";
 import ThemeFacts from "./ThemeFacts.vue";
 import ImageComponent from "./ImageComponent.vue";
 import ThemeTip from "./ThemeTip.vue";
+import ThemeNav from "./ThemeNav.vue";
 import Collapse from "./Collapse.vue";
 import CollapsePaper from "./CollapsePaper.vue";
 export default {
@@ -181,6 +184,7 @@ export default {
     ThemeFacts,
     ImageComponent,
     ThemeTip,
+    ThemeNav,
     Collapse,
     CollapsePaper
   }

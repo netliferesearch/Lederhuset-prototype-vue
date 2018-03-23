@@ -77,17 +77,6 @@
      <p>{{ lead }}</p>
     </section>
 
-    <button @click="show = !show" :aria-expanded="show ? 'true' : 'false'">
-    Trykk på meg!
-  </button>
-  <p v-if="show">Hei, her er jeg!</p>
-  <br>
-  <br>
-  <br>
-  <button @click="active = !active" :aria-pressed="active ? 'true' : 'false'">
-    Gjør meg større
-  </button>
-  <div :class="{ red: active }">Nå er jeg større</div>
   </div>
 </template>
 
@@ -96,18 +85,12 @@
 import ImageComponent from "./ImageComponent.vue";
 import Selector from "./Selector.vue";
 export default {
-  props: {
-    xs: "12",
-    sm: "6"
-  },
   name: "Home",
   data() {
     return {
       siteTitle: "Lederhuset",
       lead: `Lederhuset er en portal for ledere og arbeidsgivere
-        med praktiske verktøy og juridisk veiledning samlet på et sted.`,
-      show: false,
-      active: false
+        med praktiske verktøy og juridisk veiledning samlet på et sted.`
     };
   },
   components: {

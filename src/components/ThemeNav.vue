@@ -1,10 +1,8 @@
 <template>
     <div>
-<affix
-            class="content-nav"
-            relative-element-selector="#theme-content"
-            :offset="{ top: 60, bottom: 40 }"
-          >
+      <affix class="content-nav"
+      relative-element-selector="#theme-content"
+      :offset="{ top: 0, bottom: 140 }">
                 <scrollactive
                     v-on:itemchanged="onItemChanged"
                     active-class="active"
@@ -41,24 +39,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-.content-nav {
-  background: white;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  padding: 20px;
-  // text-align: center;
-  width: 100%;
-  a {
-    font-size: 16px;
-    color: #000000;
-    border-right: 1px solid;
-    padding: 0 10px;
-  }
-}
-.active {
-  color: var(--color-secondary) !important;
-  border-right: 1px solid var(--color-secondary);
-}
+<style lang="scss">
+
 </style>

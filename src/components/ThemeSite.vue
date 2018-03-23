@@ -1,7 +1,6 @@
 <template>
   <div>
     <ThemeHero />
-    <ThemeNav />
     <div id="theme-content">
     <ThemeContent />
     </div>
@@ -18,7 +17,6 @@
 /* eslint-disable */
 import data from "@/assets/data/data.json";
 import ThemeContent from "./ThemeContent.vue";
-import ThemeNav from "./ThemeNav.vue";
 import ThemeHero from "./ThemeHero.vue";
 import ThemeDownload from "./ThemeDownload.vue";
 import ThemeRelated from "./ThemeRelated.vue";
@@ -33,7 +31,6 @@ export default {
   },
   components: {
     ThemeContent,
-    ThemeNav,
     ThemeHero,
     ThemeDownload,
     ThemeRelated,

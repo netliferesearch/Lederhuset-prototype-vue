@@ -3,6 +3,10 @@
   justify-content: space-between;
   padding-bottom: 2%;
   margin-bottom: 50px;
+
+  a {
+    color: var(--color-black);
+  }
 }
 
 .modal-container {
@@ -58,4 +62,28 @@
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+.content-nav {
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 20px; // text-align: center;
+  width: 100%;
+  a {
+    font-size: 16px;
+    color: #000000;
+    border-right: 1px solid;
+    padding: 0 10px;
+  }
+}
+
+.active {
+  color: var(--color-secondary) !important;
+  border-right: 1px solid var(--color-secondary);
+}
+
+.vue-affix {
+  top: 0;
 }

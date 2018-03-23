@@ -24,3 +24,8 @@
     }
   }
 }
+
+.container-fluid.hero,
+.container.hero {
+  z-index: 1000;
+}

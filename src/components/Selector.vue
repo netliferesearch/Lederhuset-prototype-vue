@@ -68,4 +68,18 @@ export default {
   border-bottom: 2px solid;
   white-space: normal;
 }
+
+.dropdown-menu {
+  a {
+    color: var(--color-black);
+  }
+}
+li.highlight {
+  background-color: #fafafa;
+}
+
+.v-select .dropdown-menu > .highlight > a {
+  background: #fafafa;
+  color: #fff;
+}
 </style>
