@@ -11,6 +11,7 @@
         </container>
 
     <container>
+      <section v-scroll-reveal.reset>
       <row>
         <column sm="4" xsOffset="1">
            <h2>Feriepenger</h2>
@@ -25,6 +26,8 @@
            </ul>
         </column>
       </row>
+      </section>
+      <section v-scroll-reveal.reset>
       <row>
         <column sm="4" xsOffset="1">
            <h2>Ansettelse</h2>
@@ -39,6 +42,23 @@
            </ul>
         </column>
       </row>
+      </section>
+      <section v-scroll-reveal.reset>
+      <row>
+        <column sm="4" xsOffset="1">
+           <h2>Sykdom</h2>
+        </column>
+        <column sm="6">
+           <ul>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+           </ul>
+        </column>
+      </row>
+      </section>
       <row>
         <column sm="4">
            <ImageComponent :url="require('../assets/images/study.jpg')"/>

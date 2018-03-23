@@ -24,14 +24,11 @@
               <div class="modal" v-show="show" v-on:click="toggle">
                   <row>
                     <div class="modal-exit">X</div>
-                    <column>
-                      <Selector></Selector>
-                    </column>
                   </row>
                   <row>
                     <column sm="4">
                       <div class="modal-header">
-                        <h2>Meny</h2>
+                        <strong>Meny</strong>
                         <ul>
                           <li>
                             <router-link to="/innlogget">
@@ -52,7 +49,7 @@
                       </div>
                     </column>
                     <column sm="4">
-                    <h2>{{ sitetitle }}</h2>
+                    <strong>{{ sitetitle }}</strong>
                     <ul>
                           <li>
                             <router-link to="/kontakt-oss">
@@ -62,7 +59,7 @@
                         </ul>
                     </column>
                     <column sm="4">
-                    <h2>Kontakt</h2>
+                    <strong>Kontakt</strong>
                     <p>
                       hei@lederhuset.no <br />
                       22 42 46 42 <br />
@@ -81,7 +78,6 @@
 
 <script>
 /* eslint-disable */
-import Selector from "./Selector.vue";
 export default {
   data() {
     return {
@@ -94,9 +90,6 @@ export default {
     toggle: function() {
       this.show = !this.show;
     }
-  },
-  components: {
-    Selector
   }
 };
 </script>

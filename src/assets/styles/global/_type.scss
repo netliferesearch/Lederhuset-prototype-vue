@@ -13,6 +13,11 @@ p {
     line-height: var(--p-line-height);
   }
 }
+
+strong,
+b {
+  font-family: var(--Sans-Bold);
+}
 h1 {
   font-family: var(--Serif);
 }
@@ -24,7 +29,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-
+  font-weight: normal;
   transition: all linear 0.2s;
   max-width: 100vw;
   font-feature-settings: "liga" 1, "kern" 1;
