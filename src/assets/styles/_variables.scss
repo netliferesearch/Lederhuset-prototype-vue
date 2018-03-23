@@ -1,19 +1,17 @@
 @font-face {
-  font-family: "Neutral";
-  src: url("/assets/fonts/NeutralBP.4cff5c9.eot?#iefix")
-      format("embedded-opentype"),
-    url("/assets/fonts/NeutralBP.4cff5c9.otf") format("opentype"),
-    url("/assets/fonts/NeutralBP.4cff5c9.woff") format("woff");
+  font-family: "larish_neuesemibold";
+  src: url("/assets/fonts/larishneuesemibold-regular-webfont.woff2")
+      format("woff2"),
+    url("/assets/fonts/larishneuesemibold-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Larish-Neue";
-  src: url("/assets/fonts/LarishNeueSemibold-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("/assets/fonts/LarishNeueSemibold-Regular.otf") format("opentype"),
-    url("/assets/fonts/LarishNeueSemibold-Regular.woff") format("woff");
+  font-family: "Neutral";
+  src: url("/assets/fonts/Neutral.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/Neutral.otf") format("opentype"),
+    url("/assets/fonts/Neutral.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +22,8 @@
   --color-secondary: #00a695;
   /* Fonts */
   --Sans: "Neutral", sans-serif;
-  --Serif: "Larish-Neue";
+  --Serif: "larish_neuesemibold", serif;
+
   /* Font Sizes */
   --main-font-size: calc(14px + 3 * ((100vw - 420px) / 860));
   --xs: 440px;
