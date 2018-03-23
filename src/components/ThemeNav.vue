@@ -46,6 +46,7 @@ export default {
   background: white;
   top: 0;
   left: 0;
+  z-index: 10;
   padding: 20px;
   // text-align: center;
   width: 100%;
