@@ -4,17 +4,16 @@
       format("embedded-opentype"),
     url("/assets/fonts/NeutralBP.4cff5c9.otf") format("opentype"),
     url("/assets/fonts/NeutralBP.4cff5c9.woff") format("woff");
-
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Larish-Neue";
   src: url("/assets/fonts/LarishNeueSemibold-Regular.eot?#iefix")
       format("embedded-opentype"),
     url("/assets/fonts/LarishNeueSemibold-Regular.otf") format("opentype"),
     url("/assets/fonts/LarishNeueSemibold-Regular.woff") format("woff");
-
   font-weight: normal;
   font-style: normal;
 }
@@ -23,19 +22,15 @@
   /* Colors */
   --color-primary: #72e8d4;
   --color-secondary: #00a695;
-
   /* Fonts */
   --Sans: "Neutral", sans-serif;
   --Serif: "Larish-Neue";
-
   /* Font Sizes */
   --main-font-size: calc(14px + 3 * ((100vw - 420px) / 860));
-
   --xs: 440px;
   --md: 620px;
   --lg: 1000px;
   --xl: 1280px;
-
   /* Spacings */
   --spacing: 24px;
   /* Wrapper Padding*/
@@ -47,7 +42,6 @@
   --h2-font-size: 1rem;
   --h3-line-height: 1.05;
   --h3-font-size: 0.5rem;
-
   /* Breakpoints */
   --breakpoint-xs: 576px;
   --breakpoint-sm: 768px;
