@@ -1,11 +1,44 @@
 <template>
   <div class="hello">
-    <Selector></Selector>
 
-    <section>
-      <h1>{{ siteTitle }}</h1>
-    </section>
+        <container :hero="true" class="lh-hero">
+            <row>
+                <column>
+                    <h1>{{siteTitle}}</h1>
+                    <Selector></Selector>
+                </column>
+            </row>
+        </container>
+
     <container>
+      <row>
+        <column sm="4" xsOffset="1">
+           <h2>Feriepenger</h2>
+        </column>
+        <column sm="6">
+           <ul>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+           </ul>
+        </column>
+      </row>
+      <row>
+        <column sm="4" xsOffset="1">
+           <h2>Ansettelse</h2>
+        </column>
+        <column sm="6">
+           <ul>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+             <li>En eller annen ting</li>
+           </ul>
+        </column>
+      </row>
       <row>
         <column sm="4">
            <ImageComponent :url="require('../assets/images/study.jpg')"/>
@@ -19,10 +52,10 @@
       </row>
     </container>
 
-    <section v-scroll-reveal.reset>
+
+ <section v-scroll-reveal.reset>
      <p>{{ lead }}</p>
     </section>
-
 
     <button @click="show = !show" :aria-expanded="show ? 'true' : 'false'">
     Trykk på meg!
