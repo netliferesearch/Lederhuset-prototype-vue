@@ -1,5 +1,5 @@
 <template>
-        <container hero=true class="lh-hero">
+        <container :hero="true" class="lh-hero">
             <row>
                 <column sm="5" smOffset="1">
                     <ImageComponent :url="require('../assets/images/study.jpg')"/>

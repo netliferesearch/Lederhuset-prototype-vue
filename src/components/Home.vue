@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <Selector></Selector>
+
     <section>
       <h1>{{ siteTitle }}</h1>
     </section>
@@ -10,7 +11,7 @@
            <ImageComponent :url="require('../assets/images/study.jpg')"/>
         </column>
         <column sm="4">
-           <ImageComponent :url="require('../assets/images/helse.jpg')"/>
+           <ImageComponent :url="require('../assets/images/person.jpg')"/>
         </column>
         <column sm="4">
            <ImageComponent :url="require('../assets/images/person.jpg')"/>

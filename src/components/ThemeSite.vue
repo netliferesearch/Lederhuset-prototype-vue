@@ -8,6 +8,7 @@
 
     <ThemeDownload />
     <ThemeRelated />
+    <ThemeContactUs />
 
 
 </div>
@@ -21,6 +22,7 @@ import ThemeNav from "./ThemeNav.vue";
 import ThemeHero from "./ThemeHero.vue";
 import ThemeDownload from "./ThemeDownload.vue";
 import ThemeRelated from "./ThemeRelated.vue";
+import ThemeContactUs from "./ThemeContactUs.vue";
 export default {
   name: "ThemeSite",
   props: {},
@@ -34,7 +36,8 @@ export default {
     ThemeNav,
     ThemeHero,
     ThemeDownload,
-    ThemeRelated
+    ThemeRelated,
+    ThemeContactUs
   }
 };
 </script>

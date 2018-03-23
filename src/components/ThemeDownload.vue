@@ -1,16 +1,48 @@
 <template>
         <container class="lh-block lh-block__download">
                  <row>
-                    <column sm="3">Last ned</column>
-                    <column sm="3">Last ned</column>
-                    <column sm="3">Last ned</column>
-                    <column sm="3">Last ned</column>
+                    <column sm="3">
+                      <strong>Title</strong>
+                      <p>En liten beskrivelse.</p>
+                      <a href="javascript:void(0)">PDF</a>
+                    </column>
+                    <column sm="3">
+                      <strong>Title</strong>
+                      <p>En liten beskrivelse.</p>
+                      <a href="javascript:void(0)">PDF</a>
+                    </column>
+                    <column sm="3">
+                      <strong>Title</strong>
+                      <p>En liten beskrivelse.</p>
+                      <a href="javascript:void(0)">PDF</a>
+                    </column>
+                    <column sm="3">
+                      <strong>Title</strong>
+                      <p>En liten beskrivelse.</p>
+                      <a href="javascript:void(0)">PDF</a>
+                    </column>
                  </row>
                  <row>
-                    <column sm="3">Last ned</column>
-                    <column sm="3">Last ned</column>
-                    <column sm="3">Last ned</column>
-                    <column sm="3">Last ned</column>
+                    <column sm="3">
+                      <strong>Title</strong>
+                      <p>En liten beskrivelse.</p>
+                      <a href="javascript:void(0)">PDF</a>
+                    </column>
+                    <column sm="3">
+                      <strong>Title</strong>
+                      <p>En liten beskrivelse.</p>
+                      <a href="javascript:void(0)">PDF</a>
+                    </column>
+                    <column sm="3">
+                      <strong>Title</strong>
+                      <p>En liten beskrivelse.</p>
+                      <a href="javascript:void(0)">PDF</a>
+                    </column>
+                    <column sm="3">
+                      <strong>Title</strong>
+                      <p>En liten beskrivelse.</p>
+                      <a href="javascript:void(0)">PDF</a>
+                    </column>
                  </row>
               </container>
 </template>

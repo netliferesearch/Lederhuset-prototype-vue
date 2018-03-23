@@ -26,20 +26,17 @@
 }
 
 .modal {
-  display: flex;
   position: absolute;
-  flex-direction: row;
-  justify-content: center;
   margin: auto;
   top: 0;
   left: 0;
   z-index: 10;
+  padding: 2%;
   width: 100vw;
   height: 100vh;
-  background: salmon;
+  background: var(--color-primary);
   border-radius: 3px;
   cursor: pointer;
-  box-shadow: 0px 0px 0px 3000px rgba(153, 222, 100, 0.5);
 
   a {
     &:hover {
@@ -50,17 +47,8 @@
   .modal-exit {
     position: absolute;
     right: 0;
-    font-weight: bold;
+    top: 0;
     cursor: pointer;
-    color: black;
-  }
-}
-
-.modal-message {
-  margin: auto;
-  color: whitesmoke;
-  h2 {
-    text-align: center;
   }
 }
 

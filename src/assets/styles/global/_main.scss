@@ -17,8 +17,17 @@ img {
 }
 
 a {
-  color: purple;
+  color: var(--color-secondary);
   text-decoration: none;
 }
 #app {
+}
+
+ul.lh-list {
+  list-style: none;
+  padding-left: 0;
+  li {
+    padding: 20px 0;
+    border-bottom: 1px solid;
+  }
 }

@@ -38,26 +38,28 @@
             <p>Du må varsle skriftlig senest 1 måned før fratredelsestidspunktet,
               dersom en person har vært ansatt i mer enn 1 år.
             </p>
-
-            <v-collapse-wrapper>
-                <div class="lh-collapse__header" v-collapse-toggle>
-                  <u>Vis lovtekst</u>
-                </div>
-
-                <div class="my-content" v-collapse-content>
-
-                  <h4>Lov om midlertidig ansettelse</h4>
-                    <p>Dersom en midlertidig ansettelse har vart mer enn fire år
-                      sammenhengende, skal du behandle den ansatte som fast ansatt
-                      når arbeidsforholdet bir avsluttet. Dersom en midlertidig ansettelse
-                      har vart mer enn fire år sammenhengende, skal du behandle den ansatte
-                      som fast ansatt når arbeidsforholdet bir avsluttet.
-                    </p>
-
-                    <p>Kilde: <a href="#">Lovdata.no</a></p>
-                </div>
-            </v-collapse-wrapper>
                 </column>
+            </row>
+
+            <row>
+              <column sm="6" smOffset="3">
+                  <collapse :selected="false">
+                    <div slot="collapse-header">
+                      <u>Vis lovtekst</u>
+                    </div>
+                    <div slot="collapse-body">
+                        <h4>Lov om midlertidig ansettelse</h4>
+                        <p>Dersom en midlertidig ansettelse har vart mer enn fire år
+                          sammenhengende, skal du behandle den ansatte som fast ansatt
+                          når arbeidsforholdet bir avsluttet. Dersom en midlertidig ansettelse
+                          har vart mer enn fire år sammenhengende, skal du behandle den ansatte
+                          som fast ansatt når arbeidsforholdet bir avsluttet.
+                        </p>
+
+                        <p>Kilde: <a href="#">Lovdata.no</a></p>
+                    </div>
+                  </collapse>
+              </column>
             </row>
           </container>
 
@@ -86,9 +88,15 @@
             </row>
 
             <row>
-              <blockquote>
-                Vær så konkret som mulig, og still spørsmål om noe oppleves som uklart.
-              </blockquote>
+
+                <ThemeTip
+                title="Husk!"
+                tips="
+                Vær så konkret som mulig, og still
+                spørsmål om noe oppleves som uklart.
+                "
+                />
+
             </row>
 
             <row>
@@ -107,6 +115,35 @@
                     går.
                   </p>
                 </column>
+            </row>
+
+            <row>
+              <column sm="6" smOffset="3">
+                  <CollapsePaper :selected="false">
+                    <div slot="collapsePaper-intro">
+                        <h4>Lov om midlertidig ansettelse</h4>
+                          <p>Dersom en midlertidig ansettelse har vart mer enn fire år
+                            sammenhengende, skal du behandle den ansatte som fast ansatt
+                            når arbeidsforholdet bir avsluttet. Dersom en midlertidig ansettelse
+                            har vart mer enn fire år sammenhengende, skal du behandle den ansatte
+                            som fast ansatt når arbeidsforholdet bir avsluttet.
+                          </p>
+                    </div>
+                    <div slot="collapsePaper-header">
+                      <u>Les videre</u>
+                    </div>
+                    <div slot="collapsePaper-body">
+                        <p>Dersom en midlertidig ansettelse har vart mer enn fire år
+                          sammenhengende, skal du behandle den ansatte som fast ansatt
+                          når arbeidsforholdet bir avsluttet. Dersom en midlertidig ansettelse
+                          har vart mer enn fire år sammenhengende, skal du behandle den ansatte
+                          som fast ansatt når arbeidsforholdet bir avsluttet.
+                        </p>
+
+                        <p>Kilde: <a href="#">Lovdata.no</a></p>
+                    </div>
+                  </CollapsePaper>
+              </column>
             </row>
 
             <row id="three">
@@ -130,6 +167,9 @@
 import data from "@/assets/data/data.json";
 import ThemeFacts from "./ThemeFacts.vue";
 import ImageComponent from "./ImageComponent.vue";
+import ThemeTip from "./ThemeTip.vue";
+import Collapse from "./Collapse.vue";
+import CollapsePaper from "./CollapsePaper.vue";
 export default {
   name: "ThemeContent",
   data() {
@@ -139,7 +179,10 @@ export default {
   },
   components: {
     ThemeFacts,
-    ImageComponent
+    ImageComponent,
+    ThemeTip,
+    Collapse,
+    CollapsePaper
   }
 };
 </script>

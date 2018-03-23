@@ -20,32 +20,58 @@
        </div>
 
             <transition name="fade">
-              <div class="modal" v-show="show" v-on:click="toggle">
-                <div class="modal-message">
-                  <div class="modal-header">
-                    <h2>Meny</h2>
-                  </div>
 
-                  <div class="modal-body">
+              <div class="modal" v-show="show" v-on:click="toggle">
+                  <row>
+                    <div class="modal-exit">X</div>
+                    <column>
+                      <Selector></Selector>
+                    </column>
+                  </row>
+                  <row>
+                    <column sm="4">
+                      <div class="modal-header">
+                        <h2>Meny</h2>
+                        <ul>
+                          <li>
+                            <router-link to="/innlogget">
+                              Innlogget forside
+                            </router-link>
+                          </li>
+                          <li>
+                            <router-link to="/ikke-innlogget">
+                              Ikke innlogget forside
+                            </router-link>
+                          </li>
+                          <li>
+                            <router-link to="/tema-side">
+                              Tema side
+                            </router-link>
+                          </li>
+                        </ul>
+                      </div>
+                    </column>
+                    <column sm="4">
+                    <h2>{{ sitetitle }}</h2>
                     <ul>
-                      <li>
-                        <router-link to="/innlogget">
-                          Innlogget forside
-                        </router-link>
-                      </li>
-                      <li>
-                        <router-link to="/ikke-innlogget">
-                          Ikke innlogget forside
-                        </router-link>
-                      </li>
-                      <li>
-                        <router-link to="/tema-side">
-                          Tema side
-                        </router-link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                          <li>
+                            <router-link to="/kontakt-oss">
+                              Kontakt oss
+                            </router-link>
+                          </li>
+                        </ul>
+                    </column>
+                    <column sm="4">
+                    <h2>Kontakt</h2>
+                    <p>
+                      hei@lederhuset.no <br />
+                      22 42 46 42 <br />
+                      Stenersgata 8, 0184 Oslo <br />
+                      Organisasjonsnummer: <br />
+                      916 898 908
+                    </p>
+                    </column>
+                  </row>
               </div>
             </transition>
 
@@ -55,6 +81,7 @@
 
 <script>
 /* eslint-disable */
+import Selector from "./Selector.vue";
 export default {
   data() {
     return {
@@ -67,6 +94,9 @@ export default {
     toggle: function() {
       this.show = !this.show;
     }
+  },
+  components: {
+    Selector
   }
 };
 </script>

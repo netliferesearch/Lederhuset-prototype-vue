@@ -1,5 +1,5 @@
 <template>
-        <container hero=true class="lh-hero">
+        <container :hero="true" class="lh-hero">
             <row>
                 <column>
                     <h1>{{data.siteTitle}}</h1>

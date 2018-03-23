@@ -57,7 +57,7 @@ export default {
   }
 }
 .active {
-  color: #a50e68 !important;
-  border-right: 1px solid green;
+  color: var(--color-secondary) !important;
+  border-right: 1px solid var(--color-secondary);
 }
 </style>
