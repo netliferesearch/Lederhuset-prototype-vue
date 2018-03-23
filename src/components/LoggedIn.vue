@@ -1,13 +1,14 @@
 <template>
   <div class="hello">
     <h1>{{ siteTitle }}</h1>
-    <IndexMeny />
+    <SearchAndFilter />
+
   </div>
 </template>
 
 <script>
 /* eslint-disable */
-import IndexMeny from "./IndexMeny.vue";
+import SearchAndFilter from "./SearchAndFilter.vue";
 
 export default {
   name: "LoggedIn",
@@ -17,7 +18,7 @@ export default {
     };
   },
   components: {
-    IndexMeny
+    SearchAndFilter
   }
 };
 </script>
