@@ -9,7 +9,7 @@
         </column>
         <column sm="6">
            <ul>
-               <div class="card" v-for="post in filteredList" >
+               <div :key="post.link" class="card" v-for="post in filteredList" >
              <li>
                 <a v-bind:href="post.link" target="_blank">
                     {{ post.title }}
