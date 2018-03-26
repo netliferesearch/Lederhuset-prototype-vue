@@ -2,7 +2,6 @@
 var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
-var history = require('connect-history-api-fallback');
 var express = require('express');
 var app = express();
 
