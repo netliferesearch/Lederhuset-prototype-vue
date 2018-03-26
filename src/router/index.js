@@ -5,10 +5,12 @@ import Contact from '@/components/Contact';
 import LoggedIn from '@/components/LoggedIn';
 import NotLoggedIn from '@/components/NotLoggedIn';
 import ThemeSite from '@/components/ThemeSite';
+import PageNotFound from '@/components/PageNotFound';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -34,6 +36,10 @@ export default new Router({
       path: '/tema-side',
       name: 'ThemeSite',
       component: ThemeSite,
+    },
+    {
+      path: '*',
+      component: PageNotFound,
     },
   ],
 });

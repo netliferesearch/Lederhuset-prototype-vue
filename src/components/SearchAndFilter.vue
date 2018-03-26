@@ -58,7 +58,7 @@ const categorizedPosts = [
     posts: [
       {
         title: 'Feriepenger',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
     ],
@@ -70,17 +70,17 @@ const categorizedPosts = [
     posts: [
       {
         title: 'Bygge tillit og kultur',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
       {
         title: 'Dette er god ledelse',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
       {
         title: 'Lederens årshjul - lederoppgaver',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
     ],
@@ -92,27 +92,27 @@ const categorizedPosts = [
     posts: [
       {
         title: 'Arbeidstid og overtid deltid, fleksitid, turnus',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
       {
         title: 'Helligdager, religiøse høytider, kvelds- og nattjobbing, ugunstig arbeidstid',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
       {
         title: 'Fri og uavhengig stilling',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
       {
         title: 'Redusert arbeidstid, fri- og uavhengig stilling',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
       {
         title: 'Overtid og avspasering',
-        url: '/#/tema-side',
+        url: '/tema-side',
         searchableContent: '',
       },
     ],
@@ -130,7 +130,7 @@ export default {
   },
   created() {
     if (window.location) {
-      if (location.hash.includes('version=hideUnmatched')) {
+      if (location.search.includes('version=hideUnmatched')) {
         this.showUnmatched = false
       }
     }
