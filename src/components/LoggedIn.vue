@@ -1,23 +1,31 @@
 <template>
   <div>
-    <SearchAndFilter :showUnmatched="showUnmatched" />
+    <SearchAndFilterFuse v-if="version === 'fuse'" />
+    <SearchAndFilter v-else :showUnmatched="version !== 'hideUnmatched'" />
   </div>
 </template>
 
 <script>
 /* eslint-disable */
 import SearchAndFilter from "./SearchAndFilter.vue";
+import SearchAndFilterFuse from "./SearchAndFilterFuse.vue";
+import queryString from "query-string";
 
 export default {
   name: "LoggedIn",
   components: {
-    SearchAndFilter
+    SearchAndFilter,
+    SearchAndFilterFuse
+  },
+  data() {
+    return {
+      version: ''
+    }
   },
   created() {
     if (window.location) {
-      if (location.search.includes('version=hideUnmatched')) {
-        this.showUnmatched = false
-      }
+      const { version = ''} = queryString.parse(location.search)
+      this.version = version
     }
   },
 };
