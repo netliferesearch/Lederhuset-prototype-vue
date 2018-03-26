@@ -1,26 +1,22 @@
 <template>
   <div>
-        <div class="lh-search-wrapper">
-            <input type="text" v-model="search" placeholder="Søk etter.."/>
-        </div>
-        <row>
-        <column sm="4" xsOffset="1">
-           <h2>Feriepenger</h2>
-        </column>
-        <column sm="6">
-           <ul>
-               <div :key="post.link" class="card" v-for="post in filteredList" >
-             <li>
-                <a v-bind:href="post.link" target="_blank">
-                    {{ post.title }}
-                </a>
-             </li>
-            </div>
-           </ul>
-        </column>
-      </row>
-
-
+    <div class="lh-search-wrapper">
+      <input type="text" v-model="search" placeholder="Søk etter.."/>
+    </div>
+    <row :key="cat.id" v-for="cat in filteredList">
+       <column sm="4">
+         <h2>{{cat.categoryTitle}}</h2>
+       </column>
+      <column sm="6" xsOffset="1">
+         <ul>
+           <li :key="post.title" class="card" v-for="post in cat.posts">
+              <a v-bind:href="post.url" target="_blank">
+                  {{ post.title }}
+              </a>
+           </li>
+         </ul>
+      </column>
+    </row>
   </div>
 </template>
 
@@ -28,35 +24,52 @@
 /* eslint-disable */
 import SearchAndFilter from "./SearchAndFilter.vue";
 
-class Post {
-  constructor(title, link) {
-    this.title = title;
-    this.link = link;
+const categorizedPosts = [
+  {
+    id: 1,
+    categoryTitle: 'Feriepenger',
+    posts: [
+      {
+        title: 'Feriepenger',
+        url: '/tema-side',
+        searchableContent: ''
+      }
+    ]
+  },
+  {
+    id: 2,
+    categoryTitle: 'Ledelse og lederrollen',
+    posts: [
+      {
+        title: 'Bygge tillit og kultur',
+        url: '/tema-side',
+        searchableContent: ''
+      },
+      {
+        title: 'Dette er god ledelse',
+        url: '/tema-side',
+        searchableContent: ''
+      },
+      {
+        title: 'Lederens årshjul - lederoppgaver',
+        url: '/tema-side',
+        searchableContent: ''
+      }
+    ]
   }
-}
+]
+
 export default {
   name: "LoggedIn",
   data() {
     return {
       search: "",
-      postList: [
-        new Post("Ferie", "/tema-side"),
-        new Post("Feriepenger", "/tema-side"),
-        new Post("Ansettelse", "/tema-side"),
-        new Post("Kontrakt", "/tema-side"),
-        new Post("Sykdom", "/tema-side"),
-        new Post("Permisjon", "/tema-side"),
-        new Post("Fødsels permisjon", "/tema-side"),
-        new Post("Avbryte kontrakt", "/tema-side"),
-        new Post("Sykemelding", "/tema-side")
-      ]
+      categorizedPosts
     };
   },
   computed: {
     filteredList() {
-      return this.postList.filter(post => {
-        return post.title.toLowerCase().includes(this.search.toLowerCase());
-      });
+      return this.categorizedPosts
     }
   },
   components: {
@@ -76,5 +89,8 @@ input {
   width: 100%;
   height: 50px;
   padding: 10px;
+}
+.lh-search-wrapper {
+  padding-bottom: 24px;
 }
 </style>
