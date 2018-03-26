@@ -1,11 +1,11 @@
 @font-face {
   font-family: "LarishNeueSemibold-Regular";
-  src: url("/assets/fonts/LarishNeueSemibold-Regular.eot?#iefix")
+  src: url("/static/LarishNeueSemibold-Regular.eot?#iefix")
       format("embedded-opentype"),
-    url("/assets/fonts/LarishNeueSemibold-Regular.otf") format("opentype"),
-    url("/assets/fonts/LarishNeueSemibold-Regular.woff") format("woff"),
-    url("/assets/fonts/LarishNeueSemibold-Regular.ttf") format("truetype"),
-    url("/assets/fonts/LarishNeueSemibold-Regular.svg#LarishNeueSemibold-Regular")
+    url("/static/LarishNeueSemibold-Regular.otf") format("opentype"),
+    url("/static/LarishNeueSemibold-Regular.woff") format("woff"),
+    url("/static/LarishNeueSemibold-Regular.ttf") format("truetype"),
+    url("/static/LarishNeueSemibold-Regular.svg#LarishNeueSemibold-Regular")
       format("svg");
 
   font-weight: normal;
@@ -14,14 +14,14 @@
 
 @font-face {
   font-family: "NeutralBP";
-  src: url("/assets/fonts/NeutralBP.woff");
+  src: url("/static/NeutralBP.woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "NeutralBP-Bold";
-  src: url("/assets/fonts/NeutralBP-Bold.woff");
+  src: url("/static/NeutralBP-Bold.woff");
   font-weight: bold;
   font-style: normal;
 }
