@@ -1,7 +1,6 @@
 <template>
-  <div class="hello">
-    <h1>{{ siteTitle }}</h1>
-    <SearchAndFilter />
+  <div>
+    <SearchAndFilter :showUnmatched="showUnmatched" />
   </div>
 </template>
 
@@ -18,7 +17,14 @@ export default {
   },
   components: {
     SearchAndFilter
-  }
+  },
+  created() {
+    if (window.location) {
+      if (location.search.includes('version=hideUnmatched')) {
+        this.showUnmatched = false
+      }
+    }
+  },
 };
 </script>
 

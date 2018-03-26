@@ -121,19 +121,17 @@ const categorizedPosts = [
 
 export default {
   name: "SearchAndFilter",
+  props: {
+    showUnmatched: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
       search: "",
-      categorizedPosts,
-      showUnmatched: true
+      categorizedPosts
     };
-  },
-  created() {
-    if (window.location) {
-      if (location.search.includes('version=hideUnmatched')) {
-        this.showUnmatched = false
-      }
-    }
   },
   computed: {
     matchList() {
