@@ -57,37 +57,6 @@ const categorizedPosts = [
   },
 ];
 
-const isMatchWithPost = ({post, searchString}) => {
-  const stringsToCheck = ['title', 'searchableContent', 'additionalSearchInfo']
-  return stringsToCheck.reduce((result, propertyToCheck) => {
-      const content = post[propertyToCheck] || ''
-      if (content.toLowerCase().includes(searchString.toLowerCase())) {
-        return true
-      }
-      return false
-  }, false)
-}
-
-function search({content = [], searchString = '' }) {
-  console.log('searching in content', content);
-  return content.reduce((acc, category) => {
-    console.log('category in reduce', category);
-    const postsWithMatch = []
-    const { posts = [] } = category
-    posts.map(post => {
-      console.log('post', post);
-      if (isMatchWithPost({post, searchString})) {
-        postsWithMatch.push(post)
-      }
-    })
-    if (postsWithMatch.length > 0) {
-      debugger
-      return acc.push({...category, ...{posts: postsWithMatch}})
-    }
-    return acc
-  }, [])
-}
-
 export default {
   name: "LoggedIn",
   data() {
@@ -98,19 +67,24 @@ export default {
   },
   computed: {
     filteredList() {
-      return this.categorizedPosts.reduce((acc, category) => {
+      const filterResult = []
+      this.categorizedPosts.map(category => {
         const { posts = [] } = category
-        const postsWithMatch = posts.filter(({title = '', searchableContent = ''}) => {
+        const postsWithMatch = posts.filter(post => {
+          const {title = '', searchableContent = ''} = post
+          // return true if any match or else false
           return title.toLowerCase().includes(this.search) ||
           searchableContent.toLowerCase().includes(this.search) ||
           false
         })
+        // if any posts match we decide to include category in search result
         if (postsWithMatch.length > 0) {
-          const match = {...category, ...{ posts: postsWithMatch} }
-          return acc.push(match)
+          // use spread operator to create new object where posts is replaced
+          // with the list of matched posts
+          return filterResult.push({...category, ...{ posts: postsWithMatch} })
         }
-        return acc
-      }, [])
+      })
+      return filterResult
     }
   },
   components: {}
