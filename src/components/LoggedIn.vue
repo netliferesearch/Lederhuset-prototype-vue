@@ -1,7 +1,7 @@
 <template>
   <div>
     <SearchAndFilterFuse v-if="version === 'fuse'" />
-    <SearchAndFilter v-else :showUnmatched="version !== 'hideUnmatched'" />
+    <SearchAndFilter v-else :hideUnmatched="version === 'hideUnmatched'" />
   </div>
 </template>
 

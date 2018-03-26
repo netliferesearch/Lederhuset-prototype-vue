@@ -28,7 +28,7 @@
 
     <!-- Here we show categories that were not matched, but greyed out -->
     <row :key="cat.id" v-for="cat in matchList"
-      v-if="showUnmatched && search.length !== 0 && !categoryHasAnyMatch(cat)">
+      v-if="!hideUnmatched && search.length !== 0 && !categoryHasAnyMatch(cat)">
        <column sm="4" class="lh-unmatched-result">
          <h2>{{cat.categoryTitle}}</h2>
        </column>
@@ -122,9 +122,9 @@ const categorizedPosts = [
 export default {
   name: "SearchAndFilter",
   props: {
-    showUnmatched: {
+    hideUnmatched: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   data() {
