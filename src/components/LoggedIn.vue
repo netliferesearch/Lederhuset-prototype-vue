@@ -2,7 +2,6 @@
   <div class="hello">
     <h1>{{ siteTitle }}</h1>
     <SearchAndFilter />
-
   </div>
 </template>
 

@@ -22,8 +22,6 @@
 
 <script>
 /* eslint-disable */
-import SearchAndFilter from "./SearchAndFilter.vue";
-
 const categorizedPosts = [
   {
     id: 1,
@@ -32,9 +30,9 @@ const categorizedPosts = [
       {
         title: 'Feriepenger',
         url: '/tema-side',
-        searchableContent: ''
-      }
-    ]
+        searchableContent: '',
+      },
+    ],
   },
   {
     id: 2,
@@ -43,21 +41,52 @@ const categorizedPosts = [
       {
         title: 'Bygge tillit og kultur',
         url: '/tema-side',
-        searchableContent: ''
+        searchableContent: '',
       },
       {
         title: 'Dette er god ledelse',
         url: '/tema-side',
-        searchableContent: ''
+        searchableContent: '',
       },
       {
         title: 'Lederens årshjul - lederoppgaver',
         url: '/tema-side',
-        searchableContent: ''
+        searchableContent: '',
+      },
+    ],
+  },
+];
+
+const isMatchWithPost = ({post, searchString}) => {
+  const stringsToCheck = ['title', 'searchableContent', 'additionalSearchInfo']
+  return stringsToCheck.reduce((result, propertyToCheck) => {
+      const content = post[propertyToCheck] || ''
+      if (content.toLowerCase().includes(searchString.toLowerCase())) {
+        return true
       }
-    ]
-  }
-]
+      return false
+  }, false)
+}
+
+function search({content = [], searchString = '' }) {
+  console.log('searching in content', content);
+  return content.reduce((acc, category) => {
+    console.log('category in reduce', category);
+    const postsWithMatch = []
+    const { posts = [] } = category
+    posts.map(post => {
+      console.log('post', post);
+      if (isMatchWithPost({post, searchString})) {
+        postsWithMatch.push(post)
+      }
+    })
+    if (postsWithMatch.length > 0) {
+      debugger
+      return acc.push({...category, ...{posts: postsWithMatch}})
+    }
+    return acc
+  }, [])
+}
 
 export default {
   name: "LoggedIn",
@@ -69,12 +98,22 @@ export default {
   },
   computed: {
     filteredList() {
-      return this.categorizedPosts
+      return this.categorizedPosts.reduce((acc, category) => {
+        const { posts = [] } = category
+        const postsWithMatch = posts.filter(({title = '', searchableContent = ''}) => {
+          return title.toLowerCase().includes(this.search) ||
+          searchableContent.toLowerCase().includes(this.search) ||
+          false
+        })
+        if (postsWithMatch.length > 0) {
+          const match = {...category, ...{ posts: postsWithMatch} }
+          return acc.push(match)
+        }
+        return acc
+      }, [])
     }
   },
-  components: {
-    SearchAndFilter
-  }
+  components: {}
 };
 </script>
 
