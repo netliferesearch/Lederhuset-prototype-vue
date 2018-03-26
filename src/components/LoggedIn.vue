@@ -10,11 +10,6 @@ import SearchAndFilter from "./SearchAndFilter.vue";
 
 export default {
   name: "LoggedIn",
-  data() {
-    return {
-      siteTitle: "Hva kan vi hjelpe deg med?"
-    };
-  },
   components: {
     SearchAndFilter
   },
