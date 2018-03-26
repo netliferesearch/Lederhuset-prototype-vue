@@ -55,6 +55,37 @@ const categorizedPosts = [
       },
     ],
   },
+  {
+    id: 3,
+    categoryTitle: 'Arbeidstid',
+    posts: [
+      {
+        title: 'Arbeidstid og overtid deltid, fleksitid, turnus',
+        url: '/tema-side',
+        searchableContent: '',
+      },
+      {
+        title: 'Helligdager, religiøse høytider, kvelds- og nattjobbing, ugunstig arbeidstid',
+        url: '/tema-side',
+        searchableContent: '',
+      },
+      {
+        title: 'Fri og uavhengig stilling',
+        url: '/tema-side',
+        searchableContent: '',
+      },
+      {
+        title: 'Redusert arbeidstid, fri- og uavhengig stilling',
+        url: '/tema-side',
+        searchableContent: '',
+      },
+      {
+        title: 'Overtid og avspasering',
+        url: '/tema-side',
+        searchableContent: '',
+      },
+    ],
+  },
 ];
 
 export default {
