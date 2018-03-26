@@ -28,7 +28,7 @@
 
     <!-- Here we show categories that were not matched, but greyed out -->
     <row :key="cat.id" v-for="cat in matchList"
-      v-if="search.length !== 0 && !categoryHasAnyMatch(cat)">
+      v-if="showUnmatched && search.length !== 0 && !categoryHasAnyMatch(cat)">
        <column sm="4" class="lh-unmatched-result">
          <h2>{{cat.categoryTitle}}</h2>
        </column>
@@ -124,8 +124,16 @@ export default {
   data() {
     return {
       search: "",
-      categorizedPosts
+      categorizedPosts,
+      showUnmatched: true
     };
+  },
+  created() {
+    if (window.location) {
+      if (location.hash.includes('version=hideUnmatched')) {
+        this.showUnmatched = false
+      }
+    }
   },
   computed: {
     matchList() {
