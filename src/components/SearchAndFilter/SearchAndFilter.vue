@@ -51,7 +51,7 @@
 /* eslint-disable */
 
 import some from 'lodash/some'
-import searchData from './searchData'
+import getSearchData from './searchData'
 import SearchInput from './SearchInput'
 
 export default {
@@ -68,7 +68,7 @@ export default {
   data() {
     return {
       search: "",
-      categorizedPosts: searchData,
+      categorizedPosts: getSearchData(),
     };
   },
   computed: {

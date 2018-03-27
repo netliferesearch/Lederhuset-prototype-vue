@@ -1,4 +1,6 @@
-export default [
+import sortBy from 'lodash/sortBy';
+
+const data = [
   {
     id: 1,
     categoryTitle: 'Feriepenger',
@@ -66,3 +68,11 @@ export default [
     ],
   },
 ];
+
+/**
+ * Takes the dummy search data and sorts it by post titles and then category titles.
+ * @return {[Array]} sorted search data
+ */
+export default function getSearchData() {
+  return sortBy(data.map(category => ({ ...category, ...{ posts: sortBy(category.posts, ['title']) } })), ['categoryTitle']);
+}

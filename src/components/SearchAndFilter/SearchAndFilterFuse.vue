@@ -27,7 +27,7 @@
 
 import some from 'lodash/some'
 import Fuse from 'fuse.js'
-import searchData from './searchData'
+import getSearchData from './searchData'
 import SearchInput from './SearchInput'
 
 export default {
@@ -51,7 +51,7 @@ export default {
       ]
     };
     return {
-      fuse: new Fuse(searchData, options),
+      fuse: new Fuse(getSearchData(), options),
       search: ""
     };
   },
