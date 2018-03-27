@@ -1,5 +1,5 @@
 <template>
-  <input type="text" :value="value" @input="updateInput" :placeholder="placeholderText"/>
+  <input ref="searchInput" type="text" :value="value" @input="updateInput"/>
 </template>
 
 <script>
@@ -7,43 +7,32 @@
 
 import findIndex from 'lodash/findIndex'
 import searchData from './searchData'
+import Typed from 'typed.js';
 
 export default {
   name: "SearchInput",
   props: ['value'],
-  data() {
-    return {
-      setIntervalId: null,
-      placeholderText: 'Søk etter ...',
-      placeholderTextIndex: -1
-    };
-  },
-  created() {
-    this.setIntervalId = setInterval(() => {
-      this.changeInputPlaceHolderText()
-    }, 4000)
+  mounted() {
+    var options = {
+      strings: [
+        "Søk etter ledelse",
+        "Søk etter ferie",
+        "Søk etter ansettelse",
+      ],
+      typeSpeed: 40,
+      loop: true,
+      attr: 'placeholder',
+    }
+    this.typed = new Typed(this.$refs.searchInput, options);
   },
   beforeDestroy() {
-    clearInterval(this.setIntervalId)
+    // cleanup typed instance.
+    this.typed.destroy()
   },
   methods: {
     updateInput(e) {
       this.$emit('input', e.target.value)
     },
-    changeInputPlaceHolderText: function () {
-      const placeHolderTextAlternatives = [
-        'Søk etter ferie',
-        'Søk etter ledelse',
-        'Søk etter ansettelse',
-      ]
-      if (this.placeholderTextIndex + 1 === placeHolderTextAlternatives.length) {
-        // if we're at the end of alternatives, start over.
-        this.placeholderTextIndex = 0
-      } else {
-        this.placeholderTextIndex += 1
-      }
-      this.placeholderText = placeHolderTextAlternatives[this.placeholderTextIndex]
-    }
   }
 };
 </script>
