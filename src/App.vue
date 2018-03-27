@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="lh-wrapper">
+  <div id="app">
     <Menu />
     <router-view/>
   </div>
