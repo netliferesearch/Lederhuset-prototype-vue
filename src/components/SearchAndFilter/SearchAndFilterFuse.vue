@@ -10,8 +10,8 @@
           <h2>{{cat.categoryTitle}}</h2>
         </column>
        <column sm="6" smOffset="1">
-         <ul>
-           <li :key="post.title" class="card" v-for="post in cat.posts">
+         <ul class="lh-list">
+           <li :key="post.title" v-for="post in cat.posts">
               <a v-bind:href="post.url" target="_blank">
                   {{ post.title }}
               </a>

@@ -7,18 +7,18 @@
     </row>
     <row :key="cat.id" v-for="cat in matchList"
       v-if="search.length === 0 || categoryHasAnyMatch(cat)">
-       <column sm="4" smOffset="1">
+       <column sm="5">
          <h2>{{cat.categoryTitle}}</h2>
        </column>
       <column sm="6" smOffset="1">
-         <ul>
-           <li :key="post.title" class="card" v-for="post in cat.posts"
+         <ul class="lh-list">
+           <li :key="post.title" v-for="post in cat.posts"
               v-if="search.length === 0 || post.match">
               <a v-bind:href="post.url" target="_blank">
                   {{ post.title }}
               </a>
            </li>
-           <li :key="post.title" class="card" v-for="post in cat.posts"
+           <li :key="post.title" v-for="post in cat.posts"
               v-if="search.length !== 0 && !post.match">
               <a v-bind:href="post.url" target="_blank" class="lh-unmatched-result">
                   {{ post.title }}
@@ -35,8 +35,8 @@
          <h2>{{cat.categoryTitle}}</h2>
        </column>
       <column sm="6" xsOffset="1">
-         <ul>
-           <li :key="post.title" class="card" v-for="post in cat.posts">
+         <ul class="lh-list">
+           <li :key="post.title" v-for="post in cat.posts">
               <a v-bind:href="post.url" target="_blank" class="lh-unmatched-result">
                   {{ post.title }}
               </a>
