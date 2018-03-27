@@ -17,9 +17,9 @@ export default {
   mounted() {
     var options = {
       strings: [
-        "Søk etter ledelse",
-        "Søk etter ferie",
-        "Søk etter ansettelse",
+        "Søk etter ledelse ...",
+        "Søk etter ferie ...",
+        "Søk etter ansettelse ...",
       ],
       typeSpeed: 40,
       loop: true,
@@ -49,15 +49,21 @@ input {
   margin: 0;
   border: 1px solid;
   width: 100%;
-  height: 150px;
   padding: 10px;
   border: 0;
   background-color: transparent;
-  font-size: calc(var(--h1-font-size) * 3);
+  height: 50px;
+  font-size: calc(var(--h1-font-size) * 1);
+  line-height: var(--h1-line-height);
+  @media screen and (min-width: 768px) {
+    font-size: calc(var(--h1-font-size) * 3);
+    height: 150px;
+    &::placeholder {
+      color: #ccc;
+    }
+  }
 }
-input::placeholder {
-  color: #ccc;
-}
+
 .lh-search-wrapper {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
