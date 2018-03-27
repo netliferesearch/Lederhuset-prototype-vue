@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="lh-search-wrapper">
-      <input type="text" v-model="search" placeholder="Søk etter.."/>
+      <SearchInput v-model="search" />
     </div>
     <row :key="cat.id" v-for="cat in matchList">
        <column sm="4">
@@ -26,9 +26,13 @@
 import some from 'lodash/some'
 import Fuse from 'fuse.js'
 import searchData from './searchData'
+import SearchInput from './SearchInput'
 
 export default {
   name: "SearchAndFilter",
+  components: {
+    SearchInput
+  },
   data() {
     const options = {
       shouldSort: true,
