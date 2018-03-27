@@ -6,7 +6,7 @@
       </column>
     </row>
     <row :key="cat.id" v-for="cat in matchList">
-        <column sm="4" smOffset="1">
+        <column sm="5">
           <h2>{{cat.categoryTitle}}</h2>
         </column>
        <column sm="6" smOffset="1">
