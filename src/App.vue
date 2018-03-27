@@ -1,11 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" class="lh-wrapper">
     <Menu />
-    <!--
-      Referance to image-link
-      <img src="./assets/logo.png">
-    -->
-
     <router-view/>
   </div>
 </template>
