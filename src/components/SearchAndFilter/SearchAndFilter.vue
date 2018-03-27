@@ -31,10 +31,10 @@
     <!-- Here we show categories that were not matched, but greyed out -->
     <row :key="cat.id" v-for="cat in matchList"
       v-if="!hideUnmatched && search.length !== 0 && !categoryHasAnyMatch(cat)">
-       <column sm="4" class="lh-unmatched-result">
+       <column sm="5" class="lh-unmatched-result">
          <h2>{{cat.categoryTitle}}</h2>
        </column>
-      <column sm="6" xsOffset="1">
+      <column sm="6" smOffset="1">
          <ul class="lh-list">
            <li :key="post.title" v-for="post in cat.posts">
               <a v-bind:href="post.url" target="_blank" class="lh-unmatched-result">
