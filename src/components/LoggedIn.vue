@@ -1,14 +1,16 @@
 <template>
   <div>
+    <!-- For testing we have three different search variants -->
     <SearchAndFilterFuse v-if="version === 'fuse'" />
-    <SearchAndFilter v-else :hideUnmatched="version === 'hideUnmatched'" />
+    <SearchAndFilter v-else-if="version === 'hideUnmatched'" :hideUnmatched="'true'" />
+    <SearchAndFilter v-else />
   </div>
 </template>
 
 <script>
 /* eslint-disable */
-import SearchAndFilter from "./SearchAndFilter.vue";
-import SearchAndFilterFuse from "./SearchAndFilterFuse.vue";
+import SearchAndFilter from "@/components/SearchAndFilter/SearchAndFilter.vue";
+import SearchAndFilterFuse from "@/components/SearchAndFilter/SearchAndFilterFuse.vue";
 import queryString from "query-string";
 
 export default {
