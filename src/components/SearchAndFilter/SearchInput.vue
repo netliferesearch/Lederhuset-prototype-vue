@@ -5,7 +5,6 @@
 <script>
 /* eslint-disable */
 
-import some from 'lodash/some'
 import findIndex from 'lodash/findIndex'
 import searchData from './searchData'
 

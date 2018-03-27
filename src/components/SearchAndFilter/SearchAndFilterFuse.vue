@@ -63,16 +63,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-input {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  border: 1px solid;
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-}
 .lh-search-wrapper {
   padding-bottom: 24px;
 }
