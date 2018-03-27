@@ -1,5 +1,7 @@
 <template>
-  <input ref="searchInput" type="text" :value="value" @input="updateInput"/>
+  <div class="lh-search-wrapper">
+    <input ref="searchInput" type="text" :value="value" @input="updateInput"/>
+  </div>
 </template>
 
 <script>
@@ -40,13 +42,25 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 input {
-  font-family: inherit;
+  font-family: var(--Serif);
+  caret-color: var(--color-secondary);
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   border: 1px solid;
   width: 100%;
-  height: 50px;
+  height: 150px;
   padding: 10px;
+  border: 0;
+  background-color: transparent;
+  font-size: calc(var(--h1-font-size) * 3);
+}
+input::placeholder {
+  color: #ccc;
+}
+.lh-search-wrapper {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 24px 0;
 }
 </style>
