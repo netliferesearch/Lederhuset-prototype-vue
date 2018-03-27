@@ -44,6 +44,7 @@ export default {
 input {
   font-family: var(--Serif);
   caret-color: var(--color-secondary);
+  outline-color: var(--color-secondary);
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
