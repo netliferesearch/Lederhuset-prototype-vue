@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="lh-search-wrapper">
-      <input type="text" v-model="search" placeholder="Søk etter.."/>
+      <input type="text" v-model="search" :placeholder="placeholderText"/>
     </div>
     <row :key="cat.id" v-for="cat in matchList"
       v-if="search.length === 0 || categoryHasAnyMatch(cat)">
@@ -49,6 +49,7 @@
 /* eslint-disable */
 
 import some from 'lodash/some'
+import findIndex from 'lodash/findIndex'
 import searchData from './searchData'
 
 export default {
@@ -62,8 +63,19 @@ export default {
   data() {
     return {
       search: "",
-      categorizedPosts: searchData
+      categorizedPosts: searchData,
+      setIntervalId: null,
+      placeholderText: 'Søk etter ...',
+      placeholderTextIndex: -1
     };
+  },
+  created() {
+    this.setIntervalId = setInterval(() => {
+      this.changeInputPlaceHolderText()
+    }, 4000)
+  },
+  beforeDestroy() {
+    clearInterval(this.setIntervalId)
   },
   computed: {
     matchList() {
@@ -105,6 +117,20 @@ export default {
         return true
       }
       return false
+    },
+    changeInputPlaceHolderText: function () {
+      const placeHolderTextAlternatives = [
+        'Søk etter ferie',
+        'Søk etter ledelse',
+        'Søk etter ansettelse',
+      ]
+      if (this.placeholderTextIndex + 1 === placeHolderTextAlternatives.length) {
+        // if we're at the end of alternatives, start over.
+        this.placeholderTextIndex = 0
+      } else {
+        this.placeholderTextIndex += 1
+      }
+      this.placeholderText = placeHolderTextAlternatives[this.placeholderTextIndex]
     }
   }
 };
