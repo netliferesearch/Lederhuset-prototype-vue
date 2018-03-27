@@ -12,7 +12,9 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
     "fuse.js": "^3.2.0",
     "lodash": "^4.17.5",
     "query-string": "^6.0.0",
@@ -24,9 +26,7 @@
     "vue-router": "^3.0.1",
     "vue-scroll-reveal": "^1.0.7",
     "vue-scrollactive": "^0.6.1",
-    "vue-select": "^2.4.0"
-  },
-  "devDependencies": {
+    "vue-select": "^2.4.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
