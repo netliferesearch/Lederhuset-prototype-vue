@@ -20,6 +20,12 @@ a {
   color: var(--color-secondary);
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: underline;
+  //border-bottom: 2px solid currentColor;
+}
+
 #app {
 }
 
