@@ -1,13 +1,15 @@
 <template>
   <div>
-    <div class="lh-search-wrapper">
-      <SearchInput v-model="search" />
-    </div>
+    <row bottomMd="1">
+      <column sm="12">
+        <SearchInput v-model="search" />
+      </column>
+    </row>
     <row :key="cat.id" v-for="cat in matchList">
-       <column sm="4">
-         <h2>{{cat.categoryTitle}}</h2>
-       </column>
-      <column sm="6" xsOffset="1">
+        <column sm="4" smOffset="1">
+          <h2>{{cat.categoryTitle}}</h2>
+        </column>
+       <column sm="6" smOffset="1">
          <ul>
            <li :key="post.title" class="card" v-for="post in cat.posts">
               <a v-bind:href="post.url" target="_blank">

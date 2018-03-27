@@ -1,14 +1,16 @@
 <template>
   <div>
-    <div class="lh-search-wrapper">
-      <SearchInput v-model="search" />
-    </div>
+    <row bottomMd="1">
+      <column sm="12">
+        <SearchInput v-model="search" />
+      </column>
+    </row>
     <row :key="cat.id" v-for="cat in matchList"
       v-if="search.length === 0 || categoryHasAnyMatch(cat)">
-       <column sm="4">
+       <column sm="4" smOffset="1">
          <h2>{{cat.categoryTitle}}</h2>
        </column>
-      <column sm="6" xsOffset="1">
+      <column sm="6" smOffset="1">
          <ul>
            <li :key="post.title" class="card" v-for="post in cat.posts"
               v-if="search.length === 0 || post.match">
@@ -116,9 +118,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.lh-search-wrapper {
-  padding-bottom: 24px;
-}
 .lh-unmatched-result {
   color: #ccc;
 }
